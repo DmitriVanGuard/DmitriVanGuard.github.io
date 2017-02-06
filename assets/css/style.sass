@@ -5,28 +5,41 @@ $background: #f6f6f6
 $info-blue: #33c1e3
 $danger-red: #e85f61
 
+//Vars
+$header-height: 60px
+$footer-height: 50px
+
 //Styles
 
 body
 	background-color: $background
+	font-family: 'firasans_reg'
+
+.middle
+	&::before
+		display: inline-block
+		content: ' '
+		vertical-align: middle
 
 //Wrapers
 .wrapper
-	position: relative
+	overflow: auto
 	width: 100%
 	height: 100%
-	margin: 0 auto
-	overflow: auto
 
 .wrap-enter
+	position: relative
 	min-width: 300px
 	display: flex
 	justify-content: center
 	align-items: center
 	background: url("../../img/bg/geometry2.png")
 
-.wrap-about
+.container
+	margin: 0 auto
+	height: inherit
 	max-width: 940px
+
 
 //Img
 .ava
@@ -46,82 +59,88 @@ body
 	height: 220px
 
 //Header
-.top-bar
-	height: 60px
+header
+	height: $header-height
 	background-color: white
-	padding: 10px
+	padding: 10px 0
 	margin-bottom: 30px
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2)
 
-//Footer
-.bottom-bar
-	height: 50px
-	background: $cont-grey
+	.middle::before
+		height: $header-height
+
+
+	.bar-left
+		
+		.ava_top-bar
+			vertical-align: middle
+
+		h3
+			display: inline
+			font-size: 18px
+			margin-left: 20px
+			color: $cont-grey
+			vertical-align: middle
+
+	.bar-right
+		
+		.myContacts
+			font-family: 'firasans_bold'
+			text-decoration: none
+			color: $info-blue
+			border-bottom: 1px dotted $info-blue
 	
+//Footer
+footer
+	height: $footer-height
+	background: $cont-grey
+	margin-top: -$footer-height
+	
+	.middle::before
+		height: $footer-height
+
 	.bar-left
 		line-height: 50px
-
-	h4
 		color: #7d7d7d
 		font-size: 14px
 		font-family: 'firasans_light'
 
 	.bar-right
-		.icon
-			margin-left: 8px
-			text-align: center
-			line-height: 30px
-			color: $cont-grey
-			background-color: #9c9c9c
-			height: 30px
-			width: 30px
-			border-radius: 50%
-			cursor: pointer
+
+		ul
+
+			li.icon
+				display: inline-block
+				margin-left: 8px
+				text-align: center
+				line-height: 30px
+				color: $cont-grey
+				background-color: #9c9c9c
+				width: 30px
+				border-radius: 50%
+				cursor: pointer
+
+				
 		
-		//Facebook
-		.icon:nth-of-type(1):hover
-			background-color: #4463a6
+			//Facebook
+			.icon:nth-of-type(1):hover
+				background-color: #4463a6
 
-		//VK
-		.icon:nth-of-type(2):hover
-			background-color: #5d99c3
+			//VK
+			.icon:nth-of-type(2):hover
+				background-color: #5d99c3
 
-		//Twitter
-		.icon:nth-of-type(3):hover
-			background-color: #6ac4d9
+			//Twitter
+			.icon:nth-of-type(3):hover
+				background-color: #6ac4d9
 
 
-//Bars
+//THEADER AND FOOTER Bars
 .bar-left
-	display: inline-block
-	margin-left: 130px
 	float: left
-	height: inherit
-	// vertical-align: middle
-
-	.ava_top-bar
-		vertical-align: middle
-
-	h3
-		display: inline
-		font-size: 18px
-		margin-left: 20px
-		color: $cont-grey
-		vertical-align: middle
 
 .bar-right
-	display: flex
-	height: inherit
-	align-items: center
 	float: right
-	text-align: right
-	margin-right: 130px
-
-
-	.myContacts
-		font-family: 'firasans_bold'
-		color: $info-blue
-		border-bottom: 1px dotted $info-blue
 
 
 //Buttons
@@ -130,19 +149,31 @@ body
 	border-radius: 20px
 	cursor: pointer
 	outline: none
+	text-align: center
 	font-size: 15px
 	padding: 10px
 	transition: all 0.3s
+	font-family: 'firasans_medium'
+
 
 .info-but
 	background-color: $info-blue
 	border: 2px solid $background
 	color: white
+
 	
 	&:hover
 		background-color: white
 		color: $info-blue
 			
+.danger-but
+	background-color: $background
+	border: 2px solid $danger-red
+	color: $danger-red
+	
+	&:hover
+		background-color: $danger-red
+		color: white
 
 .content
 	position: relative
@@ -168,46 +199,68 @@ body
 			right: 75px
 			box-shadow: 0 0 3px rgba(0,0,0, 0.4)
 
-.main-content
-	position: relative
+main
+	float: right
 
-	.sidebar
-		float: left
-		text-align: right
+	div
 
-		ul
-			margin: 0
-			padding: 0
-			list-style: none
+		.about-me_left
+			float: left
+			margin-right: 60px
+
+		.about-me_right
+			float: right
+
+			h1
+				font-family: 'firasans_medium'
+				font-size: 35px
+				line-height: 45px
+				color: $cont-grey
+
+			.about-me_right_text
+				width: 380px
+				height: 340px
+				padding-right: 25px
+				overflow: auto
+				margin-top: 10px
+				margin-bottom: 30px
+
+				p
+					font-family: 'firasans_light'
+					font-size: 18px
+					line-height: 26px
+					color: #646464
 
 			a
+				float: right
+				font-size: 14px
+
+.sidebar
+	float: left
+	text-align: right
+
+	ul
+		margin: 0
+		padding: 0
+		list-style: none
+
+		li
+			font-family: 'firasans_medium'
+			padding: 10px 20px
+			font-size: 18px
+			line-height: 24px
+			margin-bottom: 5px
+			
+			a
 				text-decoration: none
+				color: $cont-grey
 
-				li
-					color: $cont-grey
-					font-family: 'firasans_medium'
-					padding: 10px 20px
-					font-size: 18px
-					line-height: 24px
-					margin-bottom: 5px
-
-					&:hover
-						color: $info-blue
-
-				.selected
+				&:hover
 					color: $info-blue
-					border-right: 6px solid $info-blue
-					font-family: 'firasans_bold'
 
-	#about-me-right
-		font-size: 1.1em
+		.selected
+			border-right: 6px solid $info-blue
+			font-family: 'firasans_bold'
 
-		h1
-			margin: 10px 0
-			font-size: 35px
-
-		#about-me-text
-			width: 56%
-			height: 300px
-			line-height: 1.42
-			overflow: auto
+			a
+				color: $info-blue
