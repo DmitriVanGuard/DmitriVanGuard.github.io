@@ -49,7 +49,7 @@ header {
   height: 60px;
   background-color: white;
   padding: 10px 0;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
   header .middle::before {
     height: 60px; }
@@ -63,11 +63,13 @@ header {
     color: #414141;
     vertical-align: middle; }
   header .bar-right {
-    position: relative; }
+    position: relative;
+    padding-top: 3px; }
     header .bar-right .myContacts {
       text-decoration: none;
       font-size: 18px;
       color: #33c1e3;
+      padding-bottom: 3px;
       border-bottom: 1px dotted #33c1e3; }
 
 footer {
@@ -160,14 +162,14 @@ main {
     float: right; }
     main div .about-me_right .about-me_right-text-title {
       font-size: 35px;
-      line-height: 45px;
+      line-height: 35px;
       color: #414141; }
     main div .about-me_right .about-me_right-text {
       width: 380px;
       height: 300px;
       overflow: auto;
-      margin-top: 10px;
-      margin-bottom: 30px; }
+      margin-top: 16px;
+      margin-bottom: 50px; }
       main div .about-me_right .about-me_right-text p {
         font-size: 18px;
         line-height: 26px;
