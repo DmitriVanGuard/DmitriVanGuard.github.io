@@ -70,8 +70,8 @@ header {
       text-decoration: none;
       font-size: 18px;
       color: #33c1e3;
-      padding-bottom: 3px;
-      border-bottom: 1px dotted #33c1e3; }
+      padding-bottom: 5px;
+      background: url("../../img/decor/dots.jpg") center bottom repeat-x; }
 
 footer {
   height: 50px;
