@@ -21,11 +21,15 @@ body
 		content: ' '
 		vertical-align: middle
 
+.shadow
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5)
+
 //Wrapers
 .wrapper
 	overflow: auto
 	width: 100%
 	height: 100%
+	min-height: 640px
 
 .wrap-enter
 	position: relative
@@ -40,15 +44,14 @@ body
 	height: inherit
 	max-width: 940px
 
-
 //Img
 .ava
 	object-fit: cover //Fit non-square img in perfect circle
 	border-radius: 50%
 
 .ava-main
-	width: 150px
-	height: 150px
+	width: 140px
+	height: 140px
 
 .ava_top-bar
 	height: 60px
@@ -69,7 +72,6 @@ header
 	.middle::before
 		height: $header-height
 
-
 	.bar-left
 		
 		.ava_top-bar
@@ -77,19 +79,49 @@ header
 
 		h3
 			display: inline
+			font-family: 'firasans_light'
 			font-size: 18px
 			margin-left: 20px
 			color: $cont-grey
 			vertical-align: middle
 
 	.bar-right
-		
+		position: relative
+
 		.myContacts
-			font-family: 'firasans_bold'
+			// font-family: 'firasans_bold'
 			text-decoration: none
+			font-size: 18px
 			color: $info-blue
 			border-bottom: 1px dotted $info-blue
-	
+
+		// a:hover
+
+		// 	.contacts
+		// 		display: block
+
+		// .contacts
+		// 	display: none
+		// 	position: absolute
+		// 	background-color: white
+		// 	border: 1px solid #dedede
+		// 	border-radius: 15px
+		// 	height: 130px
+		// 	width: 190px
+		// 	top: 50px
+		// 	left: -43.5px
+
+		// 	.arrow
+		// 		position: absolute
+		// 		width: 8px
+		// 		height: 8px
+		// 		left: 89px
+		// 		top: -6px
+		// 		background-color: white
+		// 		border-left: 1px solid #dedede
+		// 		border-top: 1px solid #dedede
+		// 		transform: rotate(45deg)
+
 //Footer
 footer
 	height: $footer-height
@@ -111,7 +143,7 @@ footer
 
 			li.icon
 				display: inline-block
-				margin-left: 8px
+				margin-left: 3px
 				text-align: center
 				line-height: 30px
 				color: $cont-grey
@@ -150,7 +182,7 @@ footer
 	cursor: pointer
 	outline: none
 	text-align: center
-	font-size: 15px
+	font-size: 14px
 	padding: 10px
 	transition: all 0.3s
 	font-family: 'firasans_medium'
@@ -169,6 +201,7 @@ footer
 .danger-but
 	background-color: $background
 	border: 2px solid $danger-red
+	font-family: 'firasans_bold'
 	color: $danger-red
 	
 	&:hover
@@ -180,24 +213,22 @@ footer
 	width: 300px
 	height: 150px
 	text-align: center
-	border-radius: 20px
 
 	.content_bot
 		background-color: $info-blue
-		padding: 20px
+		padding: 30px
 		border-bottom: 1px solid $background
-		border-bottom-left-radius: 20px
-		border-bottom-right-radius: 20px
+		border-radius: 0 0 7px 7px
 
 	.content_top
 		background-color: white
+		border-radius: 7px 7px 0 0
 		padding: 90px 20px 20px 20px
 
 		.ava-main
 			position: absolute
 			top: -75px
-			right: 75px
-			box-shadow: 0 0 3px rgba(0,0,0, 0.4)
+			right: 80px
 
 main
 	float: right
@@ -211,22 +242,22 @@ main
 		.about-me_right
 			float: right
 
-			h1
-				font-family: 'firasans_medium'
+			.about-me_right-text-title
+				// font-family: 'firasans_medium'
 				font-size: 35px
 				line-height: 45px
 				color: $cont-grey
 
-			.about-me_right_text
+			.about-me_right-text
 				width: 380px
-				height: 340px
-				padding-right: 25px
+				height: 300px
+				// padding-right: 25px
 				overflow: auto
 				margin-top: 10px
 				margin-bottom: 30px
 
 				p
-					font-family: 'firasans_light'
+					// font-family: 'firasans_light'
 					font-size: 18px
 					line-height: 26px
 					color: #646464
@@ -245,7 +276,7 @@ main
 		list-style: none
 
 		li
-			font-family: 'firasans_medium'
+			// font-family: 'firasans_medium'
 			padding: 10px 20px
 			font-size: 18px
 			line-height: 24px
@@ -260,7 +291,7 @@ main
 
 		.selected
 			border-right: 6px solid $info-blue
-			font-family: 'firasans_bold'
+			// font-family: 'firasans_bold'
 
 			a
 				color: $info-blue

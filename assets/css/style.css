@@ -7,10 +7,14 @@ body {
   content: " ";
   vertical-align: middle; }
 
+.shadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
+
 .wrapper {
   overflow: auto;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  min-height: 640px; }
 
 .wrap-enter {
   position: relative;
@@ -30,8 +34,8 @@ body {
   border-radius: 50%; }
 
 .ava-main {
-  width: 150px;
-  height: 150px; }
+  width: 140px;
+  height: 140px; }
 
 .ava_top-bar {
   height: 60px;
@@ -53,15 +57,18 @@ header {
     vertical-align: middle; }
   header .bar-left h3 {
     display: inline;
+    font-family: "firasans_light";
     font-size: 18px;
     margin-left: 20px;
     color: #414141;
     vertical-align: middle; }
-  header .bar-right .myContacts {
-    font-family: "firasans_bold";
-    text-decoration: none;
-    color: #33c1e3;
-    border-bottom: 1px dotted #33c1e3; }
+  header .bar-right {
+    position: relative; }
+    header .bar-right .myContacts {
+      text-decoration: none;
+      font-size: 18px;
+      color: #33c1e3;
+      border-bottom: 1px dotted #33c1e3; }
 
 footer {
   height: 50px;
@@ -76,7 +83,7 @@ footer {
     font-family: "firasans_light"; }
   footer .bar-right ul li.icon {
     display: inline-block;
-    margin-left: 8px;
+    margin-left: 3px;
     text-align: center;
     line-height: 30px;
     color: #414141;
@@ -103,7 +110,7 @@ footer {
   cursor: pointer;
   outline: none;
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   padding: 10px;
   transition: all 0.3s;
   font-family: "firasans_medium"; }
@@ -119,6 +126,7 @@ footer {
 .danger-but {
   background-color: #f6f6f6;
   border: 2px solid #e85f61;
+  font-family: "firasans_bold";
   color: #e85f61; }
   .danger-but:hover {
     background-color: #e85f61;
@@ -128,22 +136,20 @@ footer {
   position: relative;
   width: 300px;
   height: 150px;
-  text-align: center;
-  border-radius: 20px; }
+  text-align: center; }
   .content .content_bot {
     background-color: #33c1e3;
-    padding: 20px;
+    padding: 30px;
     border-bottom: 1px solid #f6f6f6;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px; }
+    border-radius: 0 0 7px 7px; }
   .content .content_top {
     background-color: white;
+    border-radius: 7px 7px 0 0;
     padding: 90px 20px 20px 20px; }
     .content .content_top .ava-main {
       position: absolute;
       top: -75px;
-      right: 75px;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.4); }
+      right: 80px; }
 
 main {
   float: right; }
@@ -152,20 +158,17 @@ main {
     margin-right: 60px; }
   main div .about-me_right {
     float: right; }
-    main div .about-me_right h1 {
-      font-family: "firasans_medium";
+    main div .about-me_right .about-me_right-text-title {
       font-size: 35px;
       line-height: 45px;
       color: #414141; }
-    main div .about-me_right .about-me_right_text {
+    main div .about-me_right .about-me_right-text {
       width: 380px;
-      height: 340px;
-      padding-right: 25px;
+      height: 300px;
       overflow: auto;
       margin-top: 10px;
       margin-bottom: 30px; }
-      main div .about-me_right .about-me_right_text p {
-        font-family: "firasans_light";
+      main div .about-me_right .about-me_right-text p {
         font-size: 18px;
         line-height: 26px;
         color: #646464; }
@@ -181,7 +184,6 @@ main {
     padding: 0;
     list-style: none; }
     .sidebar ul li {
-      font-family: "firasans_medium";
       padding: 10px 20px;
       font-size: 18px;
       line-height: 24px;
@@ -192,8 +194,7 @@ main {
         .sidebar ul li a:hover {
           color: #33c1e3; }
     .sidebar ul .selected {
-      border-right: 6px solid #33c1e3;
-      font-family: "firasans_bold"; }
+      border-right: 6px solid #33c1e3; }
       .sidebar ul .selected a {
         color: #33c1e3; }
 
