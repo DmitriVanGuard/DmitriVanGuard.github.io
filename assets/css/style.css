@@ -139,12 +139,12 @@ footer {
 .content {
   position: relative;
   width: 300px;
-  height: 150px;
-  text-align: center; }
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 0 1px 1px #999; }
   .content .content_bot {
     background-color: #33c1e3;
     padding: 30px;
-    border-bottom: 1px solid #f6f6f6;
     border-radius: 0 0 7px 7px; }
   .content .content_top {
     background-color: white;
