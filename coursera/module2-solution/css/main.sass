@@ -1,0 +1,147 @@
+@import reset.css
+
+html, body
+	margin: 0
+	padding: 0
+	height: 100%
+
+.wrapper
+	height: 100%
+	display: table-cell
+	vertical-align: middle
+
+	.page-content
+		margin-top: 10%
+
+		header
+			text-align: center
+			margin: 25px
+
+@media only screen and (min-width: 992px)
+	.content
+		width: 30%
+		position: relative
+		box-sizing: border-box
+		background-color: #ddd
+		float: left
+		border: 1px solid black
+
+		&:nth-of-type(1) 
+			margin-left: 2.5%
+
+			.title_text
+				background-color: #e7f
+
+		&:nth-of-type(2) 
+			margin-left: 2.5%
+			margin-right: 2.5%
+
+			.title_text
+				background-color: #f30
+
+		&:nth-of-type(3) 
+			margin-right: 2.5%
+			.title_text
+				background-color: #0f3
+
+		.title_text
+			margin: 0
+			display: inline-block
+			position: absolute
+			top: 0
+			right: 0
+			padding: 0 20px
+			border: 1px solid black
+			box-sizing: border-box
+
+
+		.content_text
+			padding: 35px 5px 5px 5px
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+	.content
+		width: 46.25%
+		position: relative
+		box-sizing: border-box
+		background-color: #ddd
+		float: left
+		border: 1px solid black
+
+		&:nth-of-type(1) 
+			margin-left: 2.5%
+
+			.title_text
+				background-color: #e7f
+
+		&:nth-of-type(2) 
+			margin-left: 2.5%
+			margin-right: 2.5%
+
+			.title_text
+				background-color: #f30
+
+		&:nth-of-type(3) 
+			width: 95%
+			margin: 2.5% 2.5% 0 2.5%
+			
+			.title_text
+				background-color: #0f3 
+
+
+		.title_text
+			margin: 0
+			display: inline-block
+			position: absolute
+			top: 0
+			right: 0
+			padding: 0 20px
+			border: 1px solid black
+			box-sizing: border-box
+
+
+		.content_text
+			padding: 35px 5px 5px 5px
+
+
+@media only screen and (max-width: 767px)
+	.content
+		width: 95%
+		position: relative
+		box-sizing: border-box
+		background-color: #ddd
+		float: left
+		border: 1px solid black
+		margin: 0 2.5% 2.5% 2.5%
+
+		&:nth-of-type(1) 
+
+			.title_text
+				background-color: #e7f
+
+		&:nth-of-type(2) 
+
+			.title_text
+				background-color: #f30
+
+		&:nth-of-type(3) 
+			.title_text
+				background-color: #0f3
+
+		.title_text
+			margin: 0
+			display: inline-block
+			position: absolute
+			top: 0
+			right: 0
+			padding: 0 20px
+			border: 1px solid black
+			box-sizing: border-box
+
+
+		.content_text
+			padding: 35px 5px 5px 5px
+
+
+
+	
