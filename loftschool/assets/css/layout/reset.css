@@ -1,7 +1,6 @@
 html, body{
 	margin: 0;
 	padding: 0;
-     height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li{
@@ -9,16 +8,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li{
      padding: 0;
 }
 
+.clearfix:before,
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
+ content: "";
+ display: table;
+}
+.clearfix:after {
+ clear: both;
+}

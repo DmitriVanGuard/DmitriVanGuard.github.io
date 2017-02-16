@@ -10,57 +10,61 @@
 		
 	<div class="wrapper">
 
-		<header>
+		<header class="header shadow_soft">
 			<div class="container">
-					<div class="bar-left">
-						<img src="img/content/ava.jpg" alt="" class="ava ava_top-bar shadow">
-						<h3 class="middle">Дмитрий Маров</h3>	
+					<div class="header__left">
+						<div class="user">
+							<img src="img/content/ava.jpg" alt="" class="user__photo img img_small radius_circle shadow_big">
+							<h3 class="user__name middle">Дмитрий Маров</h3>	
+						</div>
 					</div>
 
-					<div class="bar-right">
-						<a href="#" class="myContacts middle">Мои контакты</a>
+					<div class="header__right">
+						<a href="#" class="contacts middle">Мои контакты</a>
 					</div>
 			</div>
 		</header>
 		
-		<section>
-			<div class="container">	
+		<section class=" clearfix">
+			<div class="container clearfix">	
 				<aside class="sidebar">
-					<nav>
-						<ul>
-							<li class="selected"><a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i> Обо мне</a></li>
-							<li><a href="#"><i class="fa fa-rocket" aria-hidden="true"></i> Карьерный путь</a></li>
-							<li><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i> Портфолио</a></li>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item nav__item_selected"><a href="about.html" class="nav__link"><i class="fa fa-user-secret" aria-hidden="true"></i> Обо мне</a></li>
+							<li class="nav__item"><a href="career.html" class="nav__link"><i class="fa fa-rocket" aria-hidden="true"></i> Карьерный путь</a></li>
+							<li class="nav__item"><a href="#" class="nav__link"><i class="fa fa-briefcase" aria-hidden="true"></i> Портфолио</a></li>
 						</ul>
 					</nav>
 				</aside>
 
-				<main>
-					<div>
-						<div class="about-me_left">
-							<img src="img/content/ava-big.jpg" alt="" class="ava ava-about">
+				<main class="about-me clearfix">
+						<div class="about-me__left">
+							<img src="img/content/ava-big.jpg" alt="" class="img img_big radius_circle">
 						</div>
-						<div class="about-me_right">
-							<h1 class="about-me_right-text-title">Обо мне</h1>
+						<div class="about-me__right">
+							<div class="about-me__description">
+								<h1 class="title">Обо мне</h1>
 
-							<div class="about-me_right-text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
-								<br>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
-								<br>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
-								<br>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
-								<br>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
-								<br>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+								<div class="about-me__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+									<br>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+									<br>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+									<br>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+									<br>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+									<br>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
+								</div>
+							</div>
+							<div class="about-me__button">
+								<a href="#" class="button button_red download-button"><i class="fa fa-download" aria-hidden="true"></i>  Скачать резюме</a>
 							</div>
 							
-							<a href="#" class="main-but danger-but but-with-i"><i class="fa fa-download" aria-hidden="true"></i>  Скачать резюме</a>
-							
 						</div>
-					</div>
+					
 				</main>
 				
 			</div>
@@ -68,20 +72,20 @@
 
 	</div>
 
-	<footer class="clearfix">
-			<div class="container">
-				<div class="bar-left">
-					<div>&copy Дизайн сайта был разработан в школе LoftSchool</div>
-				</div>
-
-				<div class="bar-right">
-					<ul class="middle">
-						<li class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-						<li class="icon vk"><i class="fa fa-vk" aria-hidden="true"></i></li>
-						<li class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-					</ul>
-				</div>
+	<footer class="footer clearfix">
+		<div class="container">
+			<div class="footer__left">
+				<div class="copyright">&copy; Дизайн сайта был разработан в школе LoftSchool</div>
 			</div>
+
+			<div class="footer__right">
+				<ul class="socials middle">
+					<li class="socials__icon socials__icon_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+					<li class="socials__icon socials__icon_vk"><i class="fa fa-vk" aria-hidden="true"></i></li>
+					<li class="socials__icon socials__icon_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+				</ul>
+			</div>
+		</div>
 	</footer>
 
 </body>

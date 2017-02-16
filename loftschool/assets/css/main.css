@@ -1,3 +1,4 @@
-@import "layout/reset.css";
 @import "layout/fonts.css";
+@import url("normalize.css/normalize.css");
+@import "layout/reset.css";
 @import "style.css";
