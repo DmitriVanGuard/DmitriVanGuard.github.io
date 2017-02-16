@@ -1,0 +1,27 @@
+.wrap-enter {
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../../img/bg/geometry2.png"); }
+
+.content {
+  position: relative;
+  width: 300px;
+  text-align: center;
+  border-radius: 7px; }
+  .content__bot {
+    background-color: #33c1e3;
+    padding: 30px;
+    border-radius: 0 0 7px 7px; }
+  .content__top {
+    background-color: white;
+    border-radius: 7px 7px 0 0;
+    padding: 90px 20px 20px 20px; }
+  .content__pic {
+    position: absolute;
+    top: -75px;
+    right: 80px; }
+
+/*# sourceMappingURL=welcome.css.map */

@@ -1,0 +1,76 @@
+// Colors
+$cont-dark: #727272
+$cont-grey: #414141
+$background: #f6f6f6
+$info-blue: #33c1e3
+$danger-red: #e85f61
+
+//Vars
+$header-height: 60px
+$footer-height: 50px
+
+//Header
+.header
+	height: $header-height
+	background-color: white
+	padding: 10px 0
+	margin-bottom: 25px
+
+	.middle::before
+		height: $header-height
+
+	.header__left
+		float: left
+		
+		.user
+			.user__photo
+				vertical-align: middle
+
+			.user__name
+				display: inline
+				font-family: 'firasans_reg'
+				font-weight: 400
+				font-size: 18px
+				margin-left: 20px
+				color: $cont-grey
+				vertical-align: middle
+
+	.header__right
+		position: relative
+		padding-top: 3px
+		float: right
+
+		.contacts
+			font-family: 'firasans_bold'
+			text-decoration: none
+			font-size: 18px
+			color: $info-blue
+			padding-bottom: 5px
+			background: url("../../../img/decor/dots.jpg") center bottom repeat-x
+
+		// a:hover
+
+		// 	.contacts
+		// 		display: block
+
+		// .contacts
+		// 	display: none
+		// 	position: absolute
+		// 	background-color: white
+		// 	border: 1px solid #dedede
+		// 	border-radius: 15px
+		// 	height: 130px
+		// 	width: 190px
+		// 	top: 50px
+		// 	left: -43.5px
+
+		// 	.arrow
+		// 		position: absolute
+		// 		width: 8px
+		// 		height: 8px
+		// 		left: 89px
+		// 		top: -6px
+		// 		background-color: white
+		// 		border-left: 1px solid #dedede
+		// 		border-top: 1px solid #dedede
+		// 		transform: rotate(45deg)

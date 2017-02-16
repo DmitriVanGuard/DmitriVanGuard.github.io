@@ -1,0 +1,48 @@
+// Colors
+$cont-dark: #727272
+$cont-grey: #414141
+$background: #f6f6f6
+$info-blue: #33c1e3
+$danger-red: #e85f61
+
+//Vars
+$header-height: 60px
+$footer-height: 50px
+
+//Footer
+.footer
+	height: $footer-height
+	background: $cont-grey
+	margin-top: -$footer-height
+	
+	.middle::before
+		height: $footer-height
+
+	&__left
+		float: left
+		line-height: 50px
+		color: #9c9c9c
+		font-size: 14px
+		font-family: 'firasans_reg'
+
+	&__right
+		float: right
+
+		.socials
+			&__icon
+				display: inline-block
+				margin-left: 3px
+				text-align: center
+				line-height: 30px
+				color: $cont-grey
+				background-color: #9c9c9c
+				width: 30px
+				border-radius: 50%
+				cursor: pointer
+				
+				&_facebook:hover
+					background-color: #4463a6
+				&_vk:hover
+					background-color: #5d99c3
+				&_twitter:hover
+					background-color: #6ac4d9

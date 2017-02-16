@@ -2,3 +2,9 @@
 @import url("normalize.css/normalize.css");
 @import "layout/reset.css";
 @import "style.css";
+@import url("layout/welcome.css");
+@import url("layout/header.css");
+@import url("layout/footer.css");
+@import url("layout/sidebar.css");
+@import url("layout/about-me.css");
+@import url("layout/career.css");

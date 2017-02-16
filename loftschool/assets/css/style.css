@@ -23,14 +23,6 @@ body {
     height: 50px;
     content: ""; }
 
-.wrap-enter {
-  position: relative;
-  min-width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("../../img/bg/geometry2.png"); }
-
 .container {
   margin: 0 auto;
   height: inherit;
@@ -53,68 +45,6 @@ body {
   .img_big {
     width: 220px;
     height: 220px; }
-
-.header {
-  height: 60px;
-  background-color: white;
-  padding: 10px 0;
-  margin-bottom: 25px; }
-  .header .middle::before {
-    height: 60px; }
-  .header .header__left {
-    float: left; }
-    .header .header__left .user .user__photo {
-      vertical-align: middle; }
-    .header .header__left .user .user__name {
-      display: inline;
-      font-family: "firasans_reg";
-      font-weight: 400;
-      font-size: 18px;
-      margin-left: 20px;
-      color: #414141;
-      vertical-align: middle; }
-  .header .header__right {
-    position: relative;
-    padding-top: 3px;
-    float: right; }
-    .header .header__right .contacts {
-      font-family: "firasans_bold";
-      text-decoration: none;
-      font-size: 18px;
-      color: #33c1e3;
-      padding-bottom: 5px;
-      background: url("../../img/decor/dots.jpg") center bottom repeat-x; }
-
-.footer {
-  height: 50px;
-  background: #414141;
-  margin-top: -50px; }
-  .footer .middle::before {
-    height: 50px; }
-  .footer__left {
-    float: left;
-    line-height: 50px;
-    color: #9c9c9c;
-    font-size: 14px;
-    font-family: "firasans_reg"; }
-  .footer__right {
-    float: right; }
-    .footer__right .socials__icon {
-      display: inline-block;
-      margin-left: 3px;
-      text-align: center;
-      line-height: 30px;
-      color: #414141;
-      background-color: #9c9c9c;
-      width: 30px;
-      border-radius: 50%;
-      cursor: pointer; }
-      .footer__right .socials__icon_facebook:hover {
-        background-color: #4463a6; }
-      .footer__right .socials__icon_vk:hover {
-        background-color: #5d99c3; }
-      .footer__right .socials__icon_twitter:hover {
-        background-color: #6ac4d9; }
 
 .button {
   text-decoration: none;
@@ -142,24 +72,6 @@ body {
       background-color: #e85f61;
       color: white; }
 
-.content {
-  position: relative;
-  width: 300px;
-  text-align: center;
-  border-radius: 7px; }
-  .content__bot {
-    background-color: #33c1e3;
-    padding: 30px;
-    border-radius: 0 0 7px 7px; }
-  .content__top {
-    background-color: white;
-    border-radius: 7px 7px 0 0;
-    padding: 90px 20px 20px 20px; }
-  .content__pic {
-    position: absolute;
-    top: -75px;
-    right: 80px; }
-
 .title {
   font-family: "firasans_medium";
   font-weight: 400;
@@ -168,134 +80,5 @@ body {
   margin-bottom: 20px;
   line-height: 35px;
   color: #414141; }
-
-.about-me {
-  float: right; }
-  .about-me__left {
-    float: left;
-    margin-right: 60px; }
-  .about-me__right {
-    float: right; }
-  .about-me__text {
-    width: 380px;
-    height: 300px;
-    overflow: auto;
-    margin-bottom: 50px; }
-    .about-me__text p {
-      font-size: 18px;
-      line-height: 26px;
-      color: #646464; }
-  .about-me .download-button {
-    float: right;
-    font-size: 14px; }
-    .about-me .download-button i {
-      margin: 0 5px 0 2px; }
-
-.sidebar {
-  float: left;
-  text-align: right;
-  width: 215px; }
-  .sidebar .nav__list {
-    margin: 0;
-    padding: 0;
-    list-style: none; }
-  .sidebar .nav__item {
-    padding: 10px 20px;
-    font-size: 18px;
-    line-height: 24px;
-    border-right: 6px solid transparent; }
-    .sidebar .nav__item_selected {
-      border-right: 6px solid #33c1e3;
-      font-family: "firasans_bold"; }
-      .sidebar .nav__item_selected .nav__link {
-        color: #33c1e3; }
-  .sidebar .nav__link {
-    text-decoration: none;
-    color: #414141; }
-    .sidebar .nav__link:hover {
-      color: #33c1e3; }
-
-.career {
-  float: right;
-  box-sizing: border-box;
-  width: 725px;
-  padding-left: 20px; }
-  .career__title {
-    margin-bottom: 27px; }
-  .career__left {
-    float: left; }
-    .career__left__school {
-      width: 402px;
-      border-radius: 5px; }
-  .career__right {
-    float: right; }
-  .career__time-list {
-    list-style: none; }
-  .career__time-item:hover .career__year {
-    color: #33c1e3;
-    font-family: "firasans_bold";
-    font-size: 18px; }
-    .career__time-item:hover .career__year::after {
-      border-color: #a3e3f2; }
-  .career__time-item:hover .career__info-block {
-    background-color: #33c1e3; }
-    .career__time-item:hover .career__info-block h3, .career__time-item:hover .career__info-block h4 {
-      color: #fff; }
-  .career__time-item:nth-of-type(1) .career__info-block::before {
-    display: none; }
-  .career__time-item:last-of-type .career__info-block::after {
-    display: none; }
-  .career__year {
-    display: inline-block;
-    float: right;
-    font-family: "firasans_light";
-    font-size: 14px;
-    line-height: 107px;
-    color: #414141; }
-    .career__year::after {
-      display: inline-block;
-      vertical-align: middle;
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      border: 5px solid #f6f6f6;
-      background-color: #33c1e3;
-      margin-left: 5px; }
-  .career__info-block {
-    display: inline-block;
-    position: relative;
-    float: right;
-    box-sizing: border-box;
-    width: 380px;
-    padding: 18px 58px 11px 20px;
-    margin: 0 0 20px 10px;
-    line-height: 26px;
-    background: #fff; }
-    .career__info-block::after {
-      display: inline-block;
-      content: "";
-      width: 1px;
-      height: 80px;
-      background: #dddddd;
-      position: absolute;
-      left: -21px;
-      top: 63px; }
-    .career__info-block::before {
-      display: inline-block;
-      content: "";
-      width: 1px;
-      height: 54px;
-      background: #dddddd;
-      position: absolute;
-      left: -21px;
-      top: -10px; }
-    .career__info-block h3 {
-      font-size: 21px;
-      color: #727272; }
-    .career__info-block h4 {
-      font-family: "firasans_light";
-      font-size: 18px;
-      color: #8a8a8a; }
 
 /*# sourceMappingURL=style.css.map */

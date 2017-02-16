@@ -1,0 +1,27 @@
+.sidebar {
+  float: left;
+  text-align: right;
+  width: 220px; }
+  .sidebar .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .sidebar .nav__item {
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 24px;
+    border-right: 6px solid transparent; }
+    .sidebar .nav__item_selected {
+      border-right: 6px solid #33c1e3;
+      font-family: "firasans_bold"; }
+      .sidebar .nav__item_selected .nav__link {
+        color: #33c1e3; }
+  .sidebar .nav__link {
+    text-decoration: none;
+    color: #414141; }
+    .sidebar .nav__link:hover {
+      color: #33c1e3; }
+  .sidebar .nav__icon {
+    margin-right: 5px; }
+
+/*# sourceMappingURL=sidebar.css.map */

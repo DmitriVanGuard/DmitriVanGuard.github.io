@@ -1,0 +1,45 @@
+// Colors
+$cont-dark: #727272
+$cont-grey: #414141
+$background: #f6f6f6
+$info-blue: #33c1e3
+$danger-red: #e85f61
+
+//Vars
+$header-height: 60px
+$footer-height: 50px
+
+.sidebar
+	float: left
+	text-align: right
+	width: 220px
+
+	.nav
+		&__list
+			margin: 0
+			padding: 0
+			list-style: none
+
+		&__item
+			// font-family: 'firasans_medium'
+			padding: 10px 20px
+			font-size: 18px
+			line-height: 24px
+			border-right: 6px solid transparent
+			
+			&_selected
+				border-right: 6px solid $info-blue
+				font-family: 'firasans_bold'
+
+				.nav__link
+					color: $info-blue
+
+		&__link
+			text-decoration: none
+			color: $cont-grey
+
+			&:hover
+				color: $info-blue
+
+		&__icon
+			margin-right: 5px
