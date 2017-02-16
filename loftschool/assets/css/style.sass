@@ -251,6 +251,7 @@ body
 	font-weight: 400
 	font-size: 35px
 	margin: 0
+	margin-bottom: 20px
 	line-height: 35px
 	color: $cont-grey
 
@@ -269,7 +270,6 @@ body
 		height: 300px
 		// padding-right: 25px
 		overflow: auto
-		margin-top: 16px
 		margin-bottom: 50px
 
 		p
@@ -323,26 +323,88 @@ body
 .career
 	float: right
 
-	&__title
-		margin-bottom: 20px
-
-	&--left
+	&__left
 		float: left
 
 		&__school
 			width: 402px
 			border-radius: 5px
 
-	&--right
+	&__right
 		float: right
 
-		&--timelist
-			margin-left: 15px
+	&__time-list
+		list-style: none
 
-			&__timeblock
-				box-sizing: border-box
-				width: 380px
-				height: 107px
-				padding: 18px 58px 0 20px
-				margin: 0 0 20px 0
-				background: #fff
+	&__time-item
+
+		&:hover
+			.career__year
+				color: $info-blue
+
+				&::after
+					border: 5px solid lighten($info-blue, 20)
+
+	&__year
+		display: inline-block
+		float: left
+		font-family: 'firasans_light'
+		font-size: 14px
+		line-height: 107px
+		color: $cont-grey
+
+		&::after
+			display: inline-block
+			vertical-align: middle
+			content: ''
+			width: 10px
+			height: 10px
+			border-radius: 50%
+			border: 5px solid $background
+			background-color: $info-blue
+
+	&__time-block
+		box-sizing: border-box
+		position: relative
+		display: inline-block
+		width: 380px
+		height: 107px
+		padding: 18px 58px 0 20px
+		margin: 0 0 20px 0
+		line-height: 26px
+		background: #fff
+
+		&::after
+			display: inline-block
+			content: ''
+			width: 1px
+			height: 54px
+			background: red
+			position: absolute
+			left: -11px
+			top: 63px
+
+		&::before
+			display: inline-block
+			content: ''
+			width: 1px
+			height: 54px
+			background: red
+			position: absolute
+			left: -11px
+			top: -10px
+
+		&:nth-of-type(1)::before
+			display: none
+
+		// &:last-of-type &::after
+		// 	display: none
+
+
+		h3
+			font-size: 21px
+			color: $cont-dark
+		h4
+			font-family: 'firasans_light'
+			font-size: 18px
+			color: #8a8a8a
