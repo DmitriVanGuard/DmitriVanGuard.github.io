@@ -322,6 +322,12 @@ body
 
 .career
 	float: right
+	box-sizing: border-box
+	width: 725px
+	padding-left: 20px
+
+	&__title
+		margin-bottom: 27px
 
 	&__left
 		float: left
@@ -329,6 +335,7 @@ body
 		&__school
 			width: 402px
 			border-radius: 5px
+
 
 	&__right
 		float: right
@@ -341,13 +348,26 @@ body
 		&:hover
 			.career__year
 				color: $info-blue
+				font-family: 'firasans_bold'
+				font-size: 18px
 
 				&::after
-					border: 5px solid lighten($info-blue, 20)
+					border-color: lighten($info-blue, 25)
+
+			.career__info-block
+				background-color: $info-blue
+
+				h3, h4
+					color: #fff
+
+		&:nth-of-type(1) .career__info-block::before
+			display: none
+		&:last-of-type .career__info-block::after
+			display: none
 
 	&__year
 		display: inline-block
-		float: left
+		float: right
 		font-family: 'firasans_light'
 		font-size: 14px
 		line-height: 107px
@@ -362,15 +382,17 @@ body
 			border-radius: 50%
 			border: 5px solid $background
 			background-color: $info-blue
+			margin-left: 5px
 
-	&__time-block
-		box-sizing: border-box
-		position: relative
+	&__info-block
 		display: inline-block
+		position: relative
+		float: right
+		box-sizing: border-box
 		width: 380px
-		height: 107px
-		padding: 18px 58px 0 20px
-		margin: 0 0 20px 0
+		// height: 107px
+		padding: 18px 58px 11px 20px
+		margin: 0 0 20px 10px
 		line-height: 26px
 		background: #fff
 
@@ -378,10 +400,10 @@ body
 			display: inline-block
 			content: ''
 			width: 1px
-			height: 54px
-			background: red
+			height: 80px
+			background: #dddddd
 			position: absolute
-			left: -11px
+			left: -21px
 			top: 63px
 
 		&::before
@@ -389,17 +411,10 @@ body
 			content: ''
 			width: 1px
 			height: 54px
-			background: red
+			background: #dddddd
 			position: absolute
-			left: -11px
+			left: -21px
 			top: -10px
-
-		&:nth-of-type(1)::before
-			display: none
-
-		// &:last-of-type &::after
-		// 	display: none
-
 
 		h3
 			font-size: 21px

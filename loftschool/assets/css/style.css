@@ -216,7 +216,12 @@ body {
       color: #33c1e3; }
 
 .career {
-  float: right; }
+  float: right;
+  box-sizing: border-box;
+  width: 725px;
+  padding-left: 20px; }
+  .career__title {
+    margin-bottom: 27px; }
   .career__left {
     float: left; }
     .career__left__school {
@@ -227,12 +232,22 @@ body {
   .career__time-list {
     list-style: none; }
   .career__time-item:hover .career__year {
-    color: #33c1e3; }
+    color: #33c1e3;
+    font-family: "firasans_bold";
+    font-size: 18px; }
     .career__time-item:hover .career__year::after {
-      border: 5px solid #8ddcef; }
+      border-color: #a3e3f2; }
+  .career__time-item:hover .career__info-block {
+    background-color: #33c1e3; }
+    .career__time-item:hover .career__info-block h3, .career__time-item:hover .career__info-block h4 {
+      color: #fff; }
+  .career__time-item:nth-of-type(1) .career__info-block::before {
+    display: none; }
+  .career__time-item:last-of-type .career__info-block::after {
+    display: none; }
   .career__year {
     display: inline-block;
-    float: left;
+    float: right;
     font-family: "firasans_light";
     font-size: 14px;
     line-height: 107px;
@@ -245,41 +260,40 @@ body {
       height: 10px;
       border-radius: 50%;
       border: 5px solid #f6f6f6;
-      background-color: #33c1e3; }
-  .career__time-block {
-    box-sizing: border-box;
-    position: relative;
+      background-color: #33c1e3;
+      margin-left: 5px; }
+  .career__info-block {
     display: inline-block;
+    position: relative;
+    float: right;
+    box-sizing: border-box;
     width: 380px;
-    height: 107px;
-    padding: 18px 58px 0 20px;
-    margin: 0 0 20px 0;
+    padding: 18px 58px 11px 20px;
+    margin: 0 0 20px 10px;
     line-height: 26px;
     background: #fff; }
-    .career__time-block::after {
+    .career__info-block::after {
       display: inline-block;
       content: "";
       width: 1px;
-      height: 54px;
-      background: red;
+      height: 80px;
+      background: #dddddd;
       position: absolute;
-      left: -11px;
+      left: -21px;
       top: 63px; }
-    .career__time-block::before {
+    .career__info-block::before {
       display: inline-block;
       content: "";
       width: 1px;
       height: 54px;
-      background: red;
+      background: #dddddd;
       position: absolute;
-      left: -11px;
+      left: -21px;
       top: -10px; }
-    .career__time-block:nth-of-type(1)::before {
-      display: none; }
-    .career__time-block h3 {
+    .career__info-block h3 {
       font-size: 21px;
       color: #727272; }
-    .career__time-block h4 {
+    .career__info-block h4 {
       font-family: "firasans_light";
       font-size: 18px;
       color: #8a8a8a; }
