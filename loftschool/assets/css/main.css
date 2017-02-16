@@ -1,7 +1,7 @@
-@import "layout/fonts.css";
+@import url("layout/fonts.css");
 @import url("normalize.css/normalize.css");
-@import "layout/reset.css";
-@import "style.css";
+@import url("layout/reset.css");
+@import url("style.css");
 @import url("layout/welcome.css");
 @import url("layout/header.css");
 @import url("layout/footer.css");
