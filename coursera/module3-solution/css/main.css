@@ -1,0 +1,16 @@
+.content {
+  background: #ddd;
+  padding: 10px; }
+  .content__title {
+    margin: 0;
+    margin-bottom: 15px; }
+
+.navbar-brand {
+  padding-left: 20px;
+  font-size: 2em; }
+
+.header__title {
+  margin: 0;
+  margin-bottom: 40px; }
+
+/*# sourceMappingURL=main.css.map */
