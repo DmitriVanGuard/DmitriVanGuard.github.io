@@ -1,19 +1,19 @@
-// Colors
-$cont-dark: #727272
-$cont-grey: #414141
-$background: #f6f6f6
-$info-blue: #33c1e3
-$danger-red: #e85f61
+.clearfix:after
+	visibility: hidden
+	display: block
+	font-size: 0
+	content: " "
+	clear: both
+	height: 0
 
-//Vars
-$header-height: 60px
-$footer-height: 50px
+.clearfix
+	display: inline-block
 
-//Styles
+* html .clearfix
+	height: 1%
 
-body
-	background-color: $background
-	font-family: 'firasans_reg'
+.clearfix
+	display: block
 
 .middle
 	&::before
@@ -30,23 +30,6 @@ body
 		
 	&_soft
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2)
-
-
-//Wrapers
-.wrapper
-	min-width: 940px
-	min-height: 100%
-	overflow: hidden
-
-	&::after
-		display: block
-		height: $footer-height
-		content: ''
-
-.container
-	margin: 0 auto
-	height: inherit
-	max-width: 940px
 
 .radius
 	&_circle
