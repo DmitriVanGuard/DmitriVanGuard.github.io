@@ -1,11 +1,13 @@
 
-.title
-	margin-left: 20px
 
 .portfolio
 	float: right
 	// margin-left: 20px
 	width: 720px
+
+	.title
+		margin-left: 22px
+		margin-bottom: 25px
 
 	&__list
 		list-style: none
@@ -15,8 +17,42 @@
 		float: left
 		margin-left: 20px
 		margin-bottom: 20px
-
-	&__block
-		background-color: #fff
-		width: 220px
 		height: 281px
+		width: 220px
+		background-color: #fff
+		overflow: hidden
+
+	&__pic-block
+		width: 100%
+
+	&__description-block
+		box-sizing: border-box
+		padding-left: 18px
+		padding-top: 18px
+
+	&__app-title
+		color: $info-blue
+		font-weight: normal
+		font-size: 21px
+		line-height: 24px
+
+	&__additional-info
+		padding-left: 2px
+
+	&__app-goal
+		font: 14px 'firasans_light'
+		font-weight: bold
+		color: $cont-grey
+		line-height: 21px
+		margin-bottom: 10px
+
+	&__type
+		font: 14px 'firasans_bold'
+		line-height: 24px
+		color: #aeaeae
+
+		i
+			font-size: 18px
+			margin-right: 5px
+
+
