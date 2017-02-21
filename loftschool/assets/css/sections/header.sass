@@ -1,22 +1,22 @@
 
 //Header
 .header
+	box-sizing: border-box
 	height: $header-height
 	background-color: white
-	padding: 10px 0
 	margin-bottom: 25px
 
 	.middle::before
 		height: $header-height
 
-	.header__left
+	&__left
 		float: left
 		
 		.user
-			.user__photo
+			&__photo
 				vertical-align: middle
 
-			.user__name
+			&__name
 				display: inline
 				font-family: 'firasans_reg'
 				font-weight: 400
@@ -25,7 +25,7 @@
 				color: $cont-grey
 				vertical-align: middle
 
-	.header__right
+	&__right
 		position: relative
 		padding-top: 3px
 		float: right
