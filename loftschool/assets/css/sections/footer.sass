@@ -5,6 +5,7 @@
 	height: $footer-height
 	background: $cont-grey
 	margin-top: -$footer-height
+	overflow-wrap: break-word
 	
 	.middle::before
 		height: $footer-height
@@ -13,11 +14,13 @@
 		float: left
 		line-height: 50px
 		color: #9c9c9c
+		max-width: 50%
 		font-size: 14px
 		font-family: 'firasans_reg'
 
 	&__right
 		float: right
+		max-width: 50%
 
 		.socials
 			&__icon

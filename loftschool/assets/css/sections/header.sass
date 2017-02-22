@@ -4,12 +4,14 @@
 	box-sizing: border-box
 	height: $header-height
 	background-color: white
+	overflow-wrap: break-word
 	margin-bottom: 25px
 
 	.middle::before
 		height: $header-height
 
 	&__left
+		max-width: 50%
 		float: left
 		
 		.user
@@ -29,6 +31,8 @@
 		position: relative
 		padding-top: 3px
 		float: right
+		max-width: 50%
+
 
 		.contacts
 			font-family: 'firasans_bold'
