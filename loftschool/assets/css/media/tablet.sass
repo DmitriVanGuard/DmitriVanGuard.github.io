@@ -2,9 +2,6 @@
 	
 	+page-width(480px)
 	
-	.container
-		padding: 0 20px
-
 	.header
 		margin-bottom: 29px
 		
@@ -69,8 +66,46 @@
 			float: none
 			text-align: center
 	
+	.career
+		padding-left: 0
+		text-align: center
+		
+		&__left
+			float: none
+
+		&__right
+			float: none
+
+		&__year
+			display: none
+
+		&__time-item
+			margin-bottom: 20px
+			&:first-child
+				margin-top: 20px
+
+		&__info-block
+			text-align: left
+			margin: 0 auto
+
+			&:after
+				display: none
+			&:before
+				display: none
+
+
 	.portfolio
 		padding-left: 0
+
+		.title
+			text-align: center
+
+		&__item
+			&:nth-of-type(n)
+				margin-right: 8%
+
+			&:nth-of-type(2n)
+				margin-right: 0
 
 	.footer
 		text-align: center
