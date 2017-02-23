@@ -1,0 +1,87 @@
+@media screen and (min-width: 480px) and (max-width: 767px)
+	
+	+page-width(480px)
+	
+	.container
+		padding: 0 20px
+
+	.header
+		margin-bottom: 29px
+		
+		&__right
+			right: 20px
+
+		&__contacts
+			display: none
+
+		&__contacts-phone
+			display: inline-block
+
+	.content
+		margin-bottom: 90px
+
+		&__left
+			float: none
+			width: 100%
+			margin-bottom: 45px
+
+		&__right
+			float: none
+			width: 100%
+
+	.sidebar
+		text-align: center
+
+	.nav
+		&__item
+			display: inline-block
+			border: 0
+			padding: 0 20px 0 0
+			
+			&:last-child
+				padding-right: 0
+
+			&_selected
+				border-right: 0
+
+	.about-me
+		&__left
+			display: block
+			width: 100%
+			text-align: center
+			margin-bottom: 20px
+
+		&__right
+			// width: 65%
+
+		&__pic
+			width: 170px
+			height: 170px
+			margin: 0
+
+		&__description
+			max-width: 100%
+
+			.title
+				text-align: center
+
+		&__button
+			float: none
+			text-align: center
+	
+	.portfolio
+		padding-left: 0
+
+	.footer
+		text-align: center
+		padding: 20px 0
+
+		&__left
+			position: static
+			float: none
+			max-width: 100%
+			margin: 0 0 10px 0
+
+		&__right
+			float: none
+			max-width: 100%

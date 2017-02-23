@@ -2,6 +2,7 @@
 <html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>About me</title>
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -10,16 +11,20 @@
 	<div class="wrapper">
 
 		<header class="header shadow_soft">
-			<div class="container">
+			<div class="container clearfix">
 					<div class="header__left">
 						<div class="user">
-							<img src="img/content/ava.jpg" alt="" class="user__photo img img_small radius_circle shadow_big">
-							<h3 class="user__name middle">Дмитрий Маров</h3>	
+							<div class="user__pic img radius_circle shadow_big" style="background-image: url(img/content/ava.jpg);"></div>
+							<!-- <img src="img/content/ava.jpg" alt="" class="user__photo img img_small radius_circle shadow_big"> -->
+							<h3 class="user__name">Дмитрий Маров</h3>	
 						</div>
 					</div>
 
 					<div class="header__right">
-						<a href="#" class="contacts middle">Мои контакты</a>
+						<div class="header__dropdown">
+							<i class="fa fa-phone header__contacts-phone" aria-hidden="true"></i>
+							<a href="#" class="header__contacts">Мои контакты</a>
+						</div>
 					</div>
 			</div>
 		</header>
@@ -44,7 +49,8 @@
 					<h1 class="title">Портфолио</h1>
 					<ul class="portfolio__list clearfix">
 						<li class="portfolio__item radius_rounded shadow_soft">
-							<img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img">
+							<div class="portfolio__pic img" style="background-image: url(img/content/portfolio/deal_app.jpg);"></div>
+							<!-- <img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img"> -->
 							<div class="portfolio__description-block">
 								<h3 class="portfolio__app-title">Deals App</h3>
 								<div class="portfolio__additional-info">
@@ -54,7 +60,8 @@
 							</div>
 						</li>
 						<li class="portfolio__item radius_rounded shadow_soft">
-							<img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img">
+							<div class="portfolio__pic img" style="background-image: url(img/content/portfolio/deal_app.jpg);"></div>
+							<!-- <img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img"> -->
 							<div class="portfolio__description-block">
 								<h3 class="portfolio__app-title">Deals App</h3>
 								<div class="portfolio__additional-info">
@@ -64,7 +71,8 @@
 							</div>
 						</li>
 						<li class="portfolio__item radius_rounded shadow_soft">
-							<img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img">
+							<div class="portfolio__pic img" style="background-image: url(img/content/portfolio/deal_app.jpg);"></div>
+							<!-- <img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img"> -->
 							<div class="portfolio__description-block">
 								<h3 class="portfolio__app-title">Deals App</h3>
 								<div class="portfolio__additional-info">
@@ -74,7 +82,8 @@
 							</div>
 						</li>
 						<li class="portfolio__item radius_rounded shadow_soft">
-							<img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img">
+							<div class="portfolio__pic img" style="background-image: url(img/content/portfolio/deal_app.jpg);"></div>
+							<!-- <img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img"> -->
 							<div class="portfolio__description-block">
 								<h3 class="portfolio__app-title">Deals App</h3>
 								<div class="portfolio__additional-info">
@@ -84,7 +93,19 @@
 							</div>
 						</li>
 						<li class="portfolio__item radius_rounded shadow_soft">
-							<img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img">
+							<div class="portfolio__pic img" style="background-image: url(img/content/portfolio/deal_app.jpg);"></div>
+							<!-- <img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img"> -->
+							<div class="portfolio__description-block">
+								<h3 class="portfolio__app-title">Deals App</h3>
+								<div class="portfolio__additional-info">
+									<h4 class="portfolio__app-goal">Продажа одежды</h4>
+									<h4 class="portfolio__type"><i class="fa fa-mobile" aria-hidden="true"></i>Приложение</h4>
+								</div>
+							</div>
+						</li>
+						<li class="portfolio__item radius_rounded shadow_soft">
+							<div class="portfolio__pic img" style="background-image: url(img/content/portfolio/deal_app.jpg);"></div>
+							<!-- <img src="img/content/portfolio/deal_app.jpg" alt="Deals App" class="portfolio__pic-block img"> -->
 							<div class="portfolio__description-block">
 								<h3 class="portfolio__app-title">Deals App</h3>
 								<div class="portfolio__additional-info">
@@ -109,7 +130,7 @@
 			</div>
 
 			<div class="footer__right">
-				<ul class="socials middle">
+				<ul class="socials">
 					<li class="socials__icon socials__icon_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
 					<li class="socials__icon socials__icon_vk"><i class="fa fa-vk" aria-hidden="true"></i></li>
 					<li class="socials__icon socials__icon_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>

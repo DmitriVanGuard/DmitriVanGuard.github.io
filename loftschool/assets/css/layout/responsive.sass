@@ -6,6 +6,26 @@
 	.container
 		max-width: 750px
 
+	.content
+		&__left
+			float: none
+			width: 100%
+
+			.sidebar
+				text-align: left
+
+				.nav
+					&__item
+						display: inline-block
+
+						&_selected
+							border-right: 0
+
+		&__right
+			float: none
+			width: 100%
+	
+
 @media screen and (min-width: 480px) and (max-width: 768px)
 	.container
 		max-width: 480px

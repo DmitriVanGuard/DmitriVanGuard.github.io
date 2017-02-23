@@ -8,12 +8,12 @@ $danger-red: #e85f61
 $header-height: 80px
 $footer-height: 50px
 
-$container-width: 940px
 
 //Layout
 @import "layout/normalize.css"
 @import "layout/fonts.css"
 @import "font-awesome.min.css"
+@import "layout/mixins.sass"
 @import "layout/settings.sass"
 @import "layout/styles.sass"
 
@@ -26,4 +26,8 @@ $container-width: 940px
 @import "sections/career.sass"
 @import "sections/portfolio.sass"
 
-@import "layout/responsive.sass"
+//Media queries
+@import "media/desktop.sass"
+@import "media/laptop.sass"
+@import "media/tablet.sass"
+@import "media/phones.sass"

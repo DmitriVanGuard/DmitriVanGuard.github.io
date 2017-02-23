@@ -2,6 +2,7 @@
 <html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>About me</title>
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -10,17 +11,19 @@
 	<div class="wrapper">
 
 		<header class="header shadow_soft">
-			<div class="container">
+			<div class="container clearfix">
 					<div class="header__left">
 						<div class="user">
-							<img src="img/content/ava.jpg" alt="" class="user__photo img img_small radius_circle shadow_big">
-							<h3 class="user__name middle">Дмитрий Маров</h3>	
+							<div class="user__pic img radius_circle shadow_big" style="background-image: url(img/content/ava.jpg);"></div>
+							<!-- <img src="img/content/ava.jpg" alt="" class="user__photo img img_small radius_circle shadow_big"> -->
+							<h3 class="user__name">Дмитрий Маров</h3>	
 						</div>
 					</div>
 
 					<div class="header__right">
-						<div class="header__dropdown middle">
-							<a href="#" class="contacts middle">Мои контакты</a>
+						<div class="header__dropdown">
+							<i class="fa fa-phone header__contacts-phone" aria-hidden="true"></i>
+							<a href="#" class="header__contacts">Мои контакты</a>
 						</div>
 					</div>
 			</div>
@@ -43,7 +46,8 @@
 				<div class="content__right clearfix">
 					<main class="about-me clearfix">
 							<div class="about-me__left">
-								<img src="img/content/ava-big.jpg" alt="" class="img img_big radius_circle">
+								<div class="about-me__pic radius_circle img" style="background-image: url(img/content/ava-big.jpg);">
+								</div>
 							</div>
 							<div class="about-me__right">
 								<div class="about-me__description">
@@ -63,7 +67,7 @@
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo a expedita, soluta vero eaque. Maxime nulla aperiam minima blanditiis a autem vero ratione eveniet, doloremque quidem mollitia suscipit incidunt non?</p>
 									</div>
 								</div>
-								<div class="about-me__button">
+								<div class="about-me__button clearfix">
 									<a href="#" class="button button_red download-button"><i class="fa fa-download" aria-hidden="true"></i>  Скачать резюме</a>
 								</div>
 								
@@ -83,7 +87,7 @@
 			</div>
 
 			<div class="footer__right">
-				<ul class="socials middle">
+				<ul class="socials">
 					<li class="socials__icon socials__icon_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
 					<li class="socials__icon socials__icon_vk"><i class="fa fa-vk" aria-hidden="true"></i></li>
 					<li class="socials__icon socials__icon_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>

@@ -2,21 +2,23 @@
 //Header
 .header
 	box-sizing: border-box
-	height: $header-height
+	padding: 10px 0
 	background-color: white
 	overflow-wrap: break-word
 	margin-bottom: 25px
-
-	.middle::before
-		height: $header-height
+	
+	.container
+		position: relative
 
 	&__left
 		max-width: 50%
 		float: left
 		
 		.user
-			&__photo
+			&__pic
 				vertical-align: middle
+				width: 60px
+				height: 60px
 
 			&__name
 				display: inline
@@ -29,18 +31,26 @@
 
 	&__right
 		position: relative
-		padding-top: 3px
 		float: right
 		max-width: 50%
+		position: absolute
+		right: 0
+		top: 38%
 
+	&__contacts
+		font-family: 'firasans_bold'
+		text-decoration: none
+		font-size: 18px
+		color: $info-blue
+		padding-bottom: 5px
+		background: url("../../img/decor/dots.jpg") center bottom repeat-x
 
-		.contacts
-			font-family: 'firasans_bold'
-			text-decoration: none
-			font-size: 18px
-			color: $info-blue
-			padding-bottom: 5px
-			background: url("../../img/decor/dots.jpg") center bottom repeat-x
+	&__contacts-phone
+		display: none
+		color: $info-blue
+		font-size: 40px
+		margin-top: -10px
+
 
 		// a:hover
 

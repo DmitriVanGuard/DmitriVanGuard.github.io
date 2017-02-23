@@ -1,22 +1,22 @@
 
 //Footer
 .footer
-	min-width: $container-width + 20px
-	height: $footer-height
+	box-sizing: border-box
 	background: $cont-grey
 	margin-top: -$footer-height
 	overflow-wrap: break-word
+	position: relative
+	padding: 10px 0
 	
-	.middle::before
-		height: $footer-height
-
 	&__left
 		float: left
-		line-height: 50px
 		color: #9c9c9c
 		max-width: 50%
 		font-size: 14px
 		font-family: 'firasans_reg'
+		position: absolute
+		top: 50%
+		margin-top: -8px
 
 	&__right
 		float: right

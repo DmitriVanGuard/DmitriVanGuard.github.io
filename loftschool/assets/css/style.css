@@ -2,10 +2,10 @@ body {
   background-color: #f6f6f6;
   font-family: "firasans_reg"; }
 
-.middle::before {
+/* .middle::before {
   display: inline-block;
   content: "";
-  vertical-align: middle; }
+  vertical-align: middle; } */
 
 .shadow_big {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); }

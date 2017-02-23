@@ -15,12 +15,6 @@
 .clearfix
 	display: block
 
-.middle
-	&::before
-		display: inline-block
-		content: ''
-		vertical-align: middle
-
 .shadow
 	&_big
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.5)
@@ -39,20 +33,11 @@
 		border-radius: 7px
 
 .img
-	object-fit: cover //Fit non-square img in perfect circle
+	display: inline-block
 	vertical-align: middle
-	
-	&_small
-		height: 60px
-		width: 60px
-
-	&_medium
-		width: 140px
-		height: 140px
-
-	&_big
-		width: 220px
-		height: 220px
+	text-align: center
+	background-size: cover
+	background-position: center center
 
 //Buttons
 .button

@@ -3,32 +3,32 @@
 	text-align: right
 	overflow-wrap: break-word
 
-	.nav
-		&__list
-			margin: 0
-			padding: 0
-			list-style: none
+.nav
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
 
-		&__item
-			// font-family: 'firasans_medium'
-			padding: 10px 20px
-			font-size: 18px
-			line-height: 24px
-			border-right: 6px solid transparent
-			
-			&_selected
-				border-right: 6px solid $info-blue
-				font-family: 'firasans_bold'
+	&__item
+		// font-family: 'firasans_medium'
+		padding: 10px 20px 10px 0
+		font-size: 18px
+		line-height: 24px
+		border-right: 6px solid transparent
+		
+		&_selected
+			border-right: 6px solid $info-blue
+			font-family: 'firasans_bold'
 
-				.nav__link
-					color: $info-blue
-
-		&__link
-			text-decoration: none
-			color: $cont-grey
-
-			&:hover
+			.nav__link
 				color: $info-blue
 
-		&__icon
-			margin-right: 5px
+	&__link
+		text-decoration: none
+		color: $cont-grey
+
+		&:hover
+			color: $info-blue
+
+	&__icon
+		margin-right: 5px

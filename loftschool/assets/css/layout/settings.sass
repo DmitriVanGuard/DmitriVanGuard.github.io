@@ -18,7 +18,6 @@ li
 
 //Wrapers
 .wrapper
-	min-width: $container-width + 20px
 	min-height: 100%
 	overflow: hidden
 
@@ -30,7 +29,7 @@ li
 .container
 	margin: 0 auto
 	height: inherit
-	max-width: $container-width
+	box-sizing: border-box
 
 .content
 	&__left
@@ -40,3 +39,5 @@ li
 	&__right
 		float: right
 		width: 76.596%
+
++page-width(940px)
