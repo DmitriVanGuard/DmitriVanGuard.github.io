@@ -1,0 +1,48 @@
+.dropdown
+	border: 1px solid #dedede
+	background-color: #fff
+	position: absolute
+	top: 200%
+	left: 888px
+	transform: translateX(-50%)
+	z-index: 10
+
+	&__item
+		padding: 10px 20px 
+		border-bottom: 1px solid #dedede
+
+		&:last-child
+			border-bottom: none
+
+	&__link
+		text-decoration: none
+		color: $cont-grey
+		font-size: 18px
+		font-family: 'firasans_light'
+		font-weight: 100
+		line-height: 28px
+		white-space: nowrap
+
+		i
+			color: $info-blue
+			margin-right: 10px
+
+	&__triangle
+		width: 20px
+		height: 20px
+		background-color: #fff
+		border-top: 1px solid #dedede
+		border-right: 1px solid #dedede
+		position: absolute
+		left: 50%
+		margin-top: -11px
+		transform: translateX(-50%) rotate(-45deg)
+
+	&::before
+		display: block
+		content: ''
+		height: 30px
+		position: absolute
+		right: 0
+		left: 0
+		top: -29px

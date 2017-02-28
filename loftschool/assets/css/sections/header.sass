@@ -30,20 +30,29 @@
 				vertical-align: middle
 
 	&__right
-		position: relative
-		float: right
 		max-width: 50%
 		position: absolute
 		right: 0
-		top: 38%
+		top: 50%
+		margin-top: -10px
 
-	&__contacts
+	&__contacts-block
+		position: relative
+
+		&:hover
+			.dropdown
+				left: 50%
+			.header__contacts-link
+				color: $danger-red
+				background: url("../../img/decor/dots.png") 0 bottom repeat-x
+			
+	&__contacts-link
 		font-family: 'firasans_bold'
 		text-decoration: none
 		font-size: 18px
 		color: $info-blue
 		padding-bottom: 5px
-		background: url("../../img/decor/dots.jpg") center bottom repeat-x
+		background: url("../../img/decor/dots.png") 0 19px repeat-x
 
 	&__contacts-phone
 		display: none
