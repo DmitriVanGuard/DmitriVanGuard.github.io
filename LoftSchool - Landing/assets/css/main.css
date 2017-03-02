@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import url(layout/onepage-scroll.css);
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.container {
+  max-width: 940px;
+  max-height: 650px;
+  margin: 0 auto; }
+
+.section {
+  height: 100vh;
+  min-width: 940px;
+  min-height: 650px;
+  background-size: cover;
+  overflow: hidden; }
+
+.title {
+  margin: 0;
+  font-family: "gagalin";
+  font-size: 72px;
+  line-height: 85px;
+  font-weight: lighter; }
+
+.btn-order {
+  text-transform: uppercase;
+  font-family: "ubuntu_medium";
+  font-size: 13px;
+  line-height: 30px;
+  border: none;
+  background-color: #e45028;
+  border-radius: 5px;
+  outline: none;
+  padding: 2px 16px; }
+
+@font-face {
+  font-family: "lifehack";
+  src: url("fonts/Lifehack Medium.otf"); }
+@font-face {
+  font-family: "gagalin";
+  src: url("fonts/Gagalin/Gagalin-Regular.otf"); }
+@font-face {
+  font-family: "ubuntu_regular";
+  src: url("fonts/Ubuntu/Ubuntu-Regular.ttf"); }
+@font-face {
+  font-family: "ubuntu_medium";
+  src: url("fonts/Ubuntu/Ubuntu-Medium.ttf"); }
+@font-face {
+  font-family: "ubuntu_light";
+  src: url("fonts/Ubuntu/Ubuntu-Light.ttf"); }
+@font-face {
+  font-family: "ubuntu_bold";
+  src: url("fonts/Ubuntu/Ubuntu-B.ttf"); }
+.nav:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.welcome-section {
+  background-image: url("../../img/bg/first-page.jpg");
+  color: white; }
+  .welcome-section__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .welcome-section__pic {
+    margin-right: 11px; }
+  .welcome-section__title {
+    color: #f9b43b;
+    margin-bottom: 20px;
+    margin-top: 50px; }
+  .welcome-section__credo {
+    margin: 0;
+    font-family: "lifehack";
+    font-size: 65px;
+    line-height: 60px;
+    font-weight: lighter; }
+
+.brand-logo {
+  width: 92px;
+  height: 69px;
+  display: inline-block;
+  vertical-align: middle; }
+
+.nav {
+  padding-top: 12px; }
+  .nav__left {
+    float: left; }
+  .nav__right {
+    float: right;
+    text-transform: uppercase;
+    font-family: "ubuntu_medium";
+    font-size: 13px;
+    line-height: 30px; }
+    .nav__right::before {
+      content: "";
+      display: inline-block;
+      height: 69px;
+      vertical-align: middle; }
+  .nav__list {
+    display: inline-block; }
+  .nav__item {
+    display: inline-block;
+    margin-right: 12px; }
+    .nav__item::after {
+      display: inline-block;
+      content: "•";
+      margin-left: 15px; }
+    .nav__item:last-of-type::after {
+      display: none; }
+  .nav__link {
+    color: #fff;
+    text-decoration: none; }
+
+.information-section {
+  background-image: url("../../img/bg/2-page.jpg"); }
+  .information-section__content-block {
+    margin-top: 120px; }
+  .information-section__title {
+    text-align: center;
+    margin-bottom: 80px; }
+  .information-section__list {
+    font-size: 0; }
+  .information-section__item {
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    max-width: 300px;
+    vertical-align: top; }
+  .information-section__icon {
+    margin-bottom: 34px; }
+  .information-section__slogan {
+    font-family: "lifehack";
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 28px;
+    margin-bottom: 20px;
+    color: #2f3234; }
+  .information-section__text {
+    font-family: "ubuntu_light";
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #777676; }
+
+/*# sourceMappingURL=main.css.map */

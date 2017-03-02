@@ -1,0 +1,39 @@
+
+.nav
+	@extend %clearfix
+	padding-top: 12px
+
+	&__left
+		float: left
+
+	&__right
+		float: right
+		text-transform: uppercase
+		font-family: 'ubuntu_medium'
+		font-size: 13px
+		line-height: 30px
+
+		&::before
+			content: ''
+			display: inline-block
+			height: 69px
+			vertical-align: middle
+
+	&__list
+		display: inline-block
+
+	&__item
+		display: inline-block
+		margin-right: 12px
+
+		&::after
+			display: inline-block
+			content: '\2022'
+			margin-left: 15px
+
+		&:last-of-type::after
+			display: none
+
+	&__link
+		color: #fff
+		text-decoration: none
