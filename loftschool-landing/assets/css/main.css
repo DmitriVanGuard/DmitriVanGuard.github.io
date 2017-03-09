@@ -203,6 +203,10 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 940px;
   min-height: 650px;
   background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden; }
 
 .title {
@@ -337,5 +341,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     line-height: 24px;
     color: #777676; }
+
+.offers-section {
+  background-image: url("../../img/bg/3-page.jpg"); }
+  .offers-section__burger-pic {
+    width: 500px;
+    height: 329px;
+    display: inline-block; }
+    .offers-section__burger-pic img {
+      visibility: hidden; }
+  .offers-section__description-block {
+    width: 435px;
+    display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
