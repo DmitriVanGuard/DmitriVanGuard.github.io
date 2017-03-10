@@ -1,14 +1,53 @@
 .offers-section
 	background-image: url("../../img/bg/3-page.jpg")
+	
+	&__content-block
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 940px
 
 	&__burger-pic
-		width: 500px
+		width: 50%
 		height: 329px
+		margin-right: 2.53%
 		display: inline-block
 
 		img
 			visibility: hidden
 
 	&__description-block
-		width: 435px
+		width: 47%
 		display: inline-block
+
+	&__burger-title
+		color: white
+		line-height: 64px
+		margin-bottom: 50px
+
+	&__burger-review
+		font-family: 'ubuntu_light'
+		font-size: 14px
+		line-height: 24px
+		overflow-wrap: break-word
+		color: white
+		margin-bottom: 50px
+
+	&__burger-price
+		line-height: 28px
+		color: #e35028
+		display: inline-block
+		margin-right: 29px
+		vertical-align: baseline
+		
+		span
+			font-size: 30px
+			margin-left: -15px
+
+	&__burger-dropdown
+		position: absolute
+		top: -10%
+		cursor: pointer
+
+		&:hover
+			fill: #e35028

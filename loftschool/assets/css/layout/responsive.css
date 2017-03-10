@@ -1,0 +1,27 @@
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 940px; } }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container {
+    max-width: 750px; }
+
+  .content__left {
+    float: none;
+    width: 100%; }
+    .content__left .sidebar {
+      text-align: left; }
+      .content__left .sidebar .nav__item {
+        display: inline-block; }
+        .content__left .sidebar .nav__item_selected {
+          border-right: 0; }
+  .content__right {
+    float: none;
+    width: 100%; } }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    max-width: 480px; } }
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 95%; } }
+
+/*# sourceMappingURL=responsive.css.map */

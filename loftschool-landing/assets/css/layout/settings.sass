@@ -9,13 +9,14 @@ ul, li
 
 a
 	text-decoration: none
+	color: black
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, p
 	margin: 0
 	
 .container
 	max-width: 940px
-	max-height: 650px
+	height: 100vh
 	margin: 0 auto
 
 .section
@@ -23,7 +24,8 @@ h1, h2, h3, h4, h5, h6
 	min-width: 940px
 	min-height: 650px
 	background-size: cover
-	display: flex
+	background-position: center center
+	position: relative
 	overflow: hidden
 
 .title
@@ -40,6 +42,19 @@ h1, h2, h3, h4, h5, h6
 	line-height: 30px
 	border: none
 	background-color: #e45028
+	color: white
 	border-radius: 5px
 	outline: none
 	padding: 2px 16px
+
+	&_baseline
+		vertical-align: baseline
+
+.pic
+	background-position: 0px 0px
+	background-repeat: no-repeat
+	background-size: cover
+	display: inline-block
+
+	&_circle
+		border-radius: 50%

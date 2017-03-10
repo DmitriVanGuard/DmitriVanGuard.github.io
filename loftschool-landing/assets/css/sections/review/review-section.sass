@@ -1,0 +1,48 @@
+.review-section
+	&__list
+		font-size: 0px
+		height: 100%
+
+	&__item
+		display: inline-block
+		width: 25%
+		height: 50%
+		position: relative
+
+		&:hover
+			.review-section__review
+				opacity: 1
+				transform: scale(1)
+
+	&__photo
+		width: 100%
+		height: 100%
+		background-position: center center
+	
+	&__review
+		font-size: 14px
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		box-sizing: border-box
+		padding: 45px 20px
+		color: white
+		opacity: 0
+		transform: scale(0.9)
+		background-color: rgba(0, 0, 0, 0.6)
+		transition: all 300ms
+	
+	&__name
+		margin-bottom: 30px
+		font-family: 'gagalin'
+		line-height: 28px
+
+	&__text
+		font-family: 'ubuntu_light'
+		line-height: 24px
+		margin-bottom: 15px
+
+	&__button
+		background-color: #2f3234

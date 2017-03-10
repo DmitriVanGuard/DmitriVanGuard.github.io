@@ -1,0 +1,30 @@
+.about-me__left {
+  float: left; }
+.about-me__right {
+  float: right; }
+.about-me__pic {
+  margin-left: 60px;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  border: 3px solid #fff; }
+.about-me__description {
+  max-width: 380px; }
+.about-me__text {
+  height: 300px;
+  overflow-wrap: break-word;
+  overflow: auto;
+  margin-bottom: 50px; }
+  .about-me__text p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #646464; }
+.about-me__button {
+  float: right; }
+  .about-me__button .download-button {
+    display: inline-block;
+    font-size: 14px; }
+    .about-me__button .download-button i {
+      margin: 0 5px 0 2px; }
+
+/*# sourceMappingURL=about-me.css.map */

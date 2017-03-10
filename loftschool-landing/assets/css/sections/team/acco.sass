@@ -1,0 +1,64 @@
+.acco
+	float: right
+	width: 50%
+	background-color: rgba(0, 0, 0, 0.5)
+
+	&__content-block
+		position: relative
+		z-index: 1
+		box-sizing: border-box
+		padding: 113px 80px
+
+	&__title
+		color: #f9b43b
+		line-height: 64px
+		margin-bottom: 80px
+	
+	&__item
+		font-size: 14px
+		margin-bottom: 30px
+		color: white
+
+	&__person-name
+		font-family: 'gagalin'
+		line-height: 28px
+		color: white
+
+		&::before
+			display: inline-block
+			content: '\23F7'
+			font-size: 18px
+
+		&_active
+			color: #f9b43b
+
+			&::before
+				display: inline-block
+				content: '\23F6'
+				font-size: 18px
+				vertical-align: bottom
+
+	&__person-block
+		box-sizing: border-box
+		padding: 15px 0 0 15px
+
+	&__person-pic
+		width: 100px
+		height: 100px
+		margin-right: 30px
+
+	&__person-description
+		line-height: 24px
+		width: 240px
+		display: inline-block
+		vertical-align: top
+
+	&__person-position
+		font-family: 'ubuntu_bold'
+		margin-bottom: 15px
+
+	&__person-about
+		font-family: 'ubuntu_light'
+
+
+
