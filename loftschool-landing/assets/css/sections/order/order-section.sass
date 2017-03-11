@@ -47,19 +47,6 @@
 		&_choice
 			margin-right: 20px
 			cursor: pointer
-			position: relative
-
-			&::before
-				content: ''
-				display: inline-block
-				width: 8px
-				height: 8px
-				background-color: #e45028
-				position: absolute
-				right: calc(100% - 16px)
-				top: 50%
-				transform: translate(-50%, -50%) scale(0)
-				transition: transform 200ms
 
 	&__input
 		outline: none
@@ -81,6 +68,19 @@
 		margin-right: 10px
 		background-color: white
 		vertical-align: sub
+		position: relative
+
+		&::before
+			content: ''
+			display: inline-block
+			width: 8px
+			height: 8px
+			background-color: #e45028
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%) scale(0)
+			transition: transform 200ms
  	
 		&_radio
 			border-radius: 50%
@@ -89,11 +89,11 @@
 		display: none
 		
 		&_radio
-			&:checked + .order-section__label_choice::before
+			&:checked + .order-section__label_choice > span::before
 				transform: translate(-50%, -50%) scale(1)
 				border-radius: 50%
 		&_check
-			&:checked + .order-section__label_choice::before
+			&:checked + .order-section__label_choice > span::before
 				transform: translate(-50%, -50%) scale(1)
 
 
