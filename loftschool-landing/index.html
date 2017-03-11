@@ -52,22 +52,23 @@
 						<div class="information-section__description-block">
 							<ul class="information-section__list">
 								<li class="information-section__item">
-									<svg  class="icon information-section__icon">
-										<use  class="icon__meat" xlink:href="img/icons/sprites.svg#meat"></use>
+									<svg  class="icon__meat information-section__icon">
+										<use xlink:href="img/icons/sprites.svg#meat"></use>
+
 									</svg>
 									<h3 class="information-section__slogan">100% свежее мясо</h3>
 									<p class="information-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis praesentium, corporis autem reprehenderit accusantium in tempore, sequi repellat obcaecati.</p>
 								</li>
 								<li class="information-section__item">
-									<svg  class="icon information-section__icon">
-										<use  class="icon__beef" xlink:href="img/icons/sprites.svg#hand"></use>
+									<svg  class="icon__hand information-section__icon">
+										<use xlink:href="img/icons/sprites.svg#hand"></use>
 									</svg>
 									<h3 class="information-section__slogan">100% свежее мясо</h3>
 									<p class="information-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis praesentium, corporis autem reprehenderit accusantium in tempore, sequi repellat obcaecati.</p>
 								</li>
 								<li class="information-section__item">
-									<svg  class="icon information-section__icon">
-										<use  class="icon__beef" xlink:href="img/icons/sprites.svg#natural"></use>
+									<svg  class="icon__natural information-section__icon">
+										<use xlink:href="img/icons/sprites.svg#natural"></use>
 									</svg>
 									<h3 class="information-section__slogan">Натуральные ингредиенты</h3>
 									<p class="information-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis praesentium, corporis autem reprehenderit accusantium in tempore, sequi repellat obcaecati.</p>
@@ -81,13 +82,13 @@
 				<div class="container">
 					<div class="offers-section__content-block">
 						<div class="arrow-slider arrow-slider__left">
-							<svg class="">
+							<svg class="icon__arrow-slider">
 								<use  class="" xlink:href="img/icons/sprites.svg#arrow-scroll"></use>
 							</svg>
 						</div>
 						<div class="arrow-slider arrow-slider__right">
-							<svg class="">
-								<use transform="rotate(60, 50, 50)" class="" xlink:href="img/icons/sprites.svg#arrow-scroll"></use>
+							<svg class="icon__arrow-slider">
+								<use class="" xlink:href="img/icons/sprites.svg#arrow-scroll"></use>
 							</svg>
 						</div>
 						<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center">
@@ -102,7 +103,7 @@
 						<div class="burger-dropdown">
 							<div class="burger-dropdown__wrapper">
 								<div class="burger-dropdown__icon-block">
-									<svg  class="icon">
+									<svg  class="icon__burger">
 										<use  class="" xlink:href="img/icons/sprites.svg#burger"></use>
 									</svg>
 									<div class="burger-dropdown__text">Состав</div>
@@ -110,7 +111,7 @@
 								<table class="burger-dropdown__table">
 									<tr class="burger-dropdown__row">
 										<td class="burger-dropdown__column burger-dropdown__column_pic">
-											<svg  class="icon">
+											<svg  class="icon__beef">
 												<use  class="" xlink:href="img/icons/sprites.svg#beef"></use>
 											</svg>
 										</td>
@@ -119,7 +120,7 @@
 									</tr>
 									<tr class="burger-dropdown__row">
 										<td class="burger-dropdown__column burger-dropdown__column_pic">
-											<svg  class="icon">
+											<svg  class="icon__buns">
 												<use  class="" xlink:href="img/icons/sprites.svg#buns"></use>
 											</svg>
 										</td>
@@ -128,7 +129,7 @@
 									</tr>
 									<tr class="burger-dropdown__row">
 										<td class="burger-dropdown__column burger-dropdown__column_pic">
-											<svg  class="icon">
+											<svg  class="icon__salad">
 												<use  class="" xlink:href="img/icons/sprites.svg#salad"></use>
 											</svg>
 										</td>
@@ -137,7 +138,7 @@
 									</tr>
 									<tr class="burger-dropdown__row">
 										<td class="burger-dropdown__column burger-dropdown__column_pic">
-											<svg  class="icon">
+											<svg  class="icon__sauce">
 												<use  class="" xlink:href="img/icons/sprites.svg#sauce"></use>
 											</svg>
 										</td>
@@ -146,7 +147,7 @@
 									</tr>
 									<tr class="burger-dropdown__row">
 										<td class="burger-dropdown__column burger-dropdown__column_pic">
-											<svg  class="icon">
+											<svg  class="icon__cucumber">
 												<use  class="" xlink:href="img/icons/sprites.svg#cucumber"></use>
 											</svg>
 										</td>
@@ -155,7 +156,7 @@
 									</tr>
 									<tr class="burger-dropdown__row">
 										<td class="burger-dropdown__column burger-dropdown__column_pic">
-											<svg  class="icon">
+											<svg  class="icon__cheese">
 												<use  class="" xlink:href="img/icons/sprites.svg#cheese"></use>
 											</svg>
 										</td>
@@ -167,7 +168,7 @@
 						</div>
 						<div class="kkal-block">
 							<div class="kkal-block__icon">
-								<svg class="">
+								<svg class="icon__kkal">
 									<use  class="" xlink:href="img/icons/sprites.svg#kkal"></use>
 								</svg>
 								<h3 class="kkal-block__amount">1200</h3>
@@ -379,7 +380,7 @@
 		</div>
 	</footer>
 		
-	<script src="assets/js/SvgAsChildSize.js"></script>
+	<!-- <script src="assets/js/SvgAsChildSize.js"></script> -->
 	<script>
 		document.getElementsByClassName("arrow-slider__right")[0].lastElementChild.children[0].setAttribute("transform", "rotate(-90, 14.35, 14.358)")
 		document.getElementsByClassName("arrow-slider__left")[0].lastElementChild.children[0].setAttribute("transform", "rotate(90, 7.24, 7.24)")
