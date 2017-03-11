@@ -339,14 +339,17 @@
 								<label class="order-section__label order-section__label_comment">Комментарий<br/>
 									<textarea name="" id="" cols="30" rows="10" class="order-section__input order-section__input_comment"></textarea>
 								</label>
-								<label for="" class="order-section__label order-section__label_choice">
-									<input class="order-section__choice " type="radio" name="payment" value="change">Потребуется сдача
+								<input id="choice_change" class="order-section__choice order-section__choice_radio" type="radio" name="payment" value="change">
+								<label for="choice_change" class="order-section__label order-section__label_choice">
+									<span class="order-section__custom order-section__custom_radio"></span>Потребуется сдача
 								</label>
-								<label for="" class="order-section__label order-section__label_choice">
-									<input class="order-section__choice " type="radio" name="payment" value="credit-card">Оплата по карте
-								</label>
-								<label for="" class="order-section__label order-section__label_choice">
-									<input class="order-section__choice " type="checkbox" value="callback">Не перезванивать
+								<input id="choice_credit" class="order-section__choice order-section__choice_radio" type="radio" name="payment" value="credit-card">
+								<label for="choice_credit" class="order-section__label order-section__label_choice">
+									<span class="order-section__custom order-section__custom_radio"></span>Оплата по карте
+								</label><br/>
+								<input id="choice_callback" class="order-section__choice order-section__choice_check" type="checkbox" value="callback">
+								<label for="choice_callback" class="order-section__label order-section__label_choice">
+									<span class="order-section__custom "></span>Не перезванивать
 								</label><br/>
 								<button class="btn-order">Заказать</button>
 								<button class="btn-order order-section__button" type="reset">Очистить</button>
@@ -360,25 +363,25 @@
 			</section>
 		</div>
 	</div>
+	
 	<footer class="footer">
-		<div class="container">
-			<div class="footer__left">
-				<div class="footer__contact-info">
-					<div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-					<a href="#" class="footer__phone"><i class="fa fa-phone" aria-hidden="true"></i> +7 (812) 377-13-77</a>
-				</div>
-			</div>
-			<div class="footer__right">
-				<ul class="socials">
-					<li class="socials__item"><i class="fa fa-vk" aria-hidden="true"></i></li>
-					<li class="socials__item socials__item_fb"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-					<li class="socials__item"><i class="fa fa-instagram" aria-hidden="true"></i></li>
-					<li class="socials__item"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-				</ul>
-			</div>
-		</div>
-	</footer>
-		
+					<div class="container">
+						<div class="footer__left">
+							<div class="footer__contact-info">
+								<div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+								<a href="#" class="footer__phone"><i class="fa fa-phone" aria-hidden="true"></i> +7 (812) 377-13-77</a>
+							</div>
+						</div>
+						<div class="footer__right">
+							<ul class="socials">
+								<li class="socials__item"><i class="fa fa-vk" aria-hidden="true"></i></li>
+								<li class="socials__item socials__item_fb"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+								<li class="socials__item"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+								<li class="socials__item"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+							</ul>
+						</div>
+					</div>
+				</footer>
 	<!-- <script src="assets/js/SvgAsChildSize.js"></script> -->
 	<script>
 		document.getElementsByClassName("arrow-slider__right")[0].lastElementChild.children[0].setAttribute("transform", "rotate(-90, 14.5, 14)")

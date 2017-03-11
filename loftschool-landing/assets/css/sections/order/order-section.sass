@@ -46,6 +46,20 @@
 
 		&_choice
 			margin-right: 20px
+			cursor: pointer
+			position: relative
+
+			&::before
+				content: ''
+				display: inline-block
+				width: 8px
+				height: 8px
+				background-color: #e45028
+				position: absolute
+				right: calc(100% - 16px)
+				top: 50%
+				transform: translate(-50%, -50%) scale(0)
+				transition: transform 200ms
 
 	&__input
 		outline: none
@@ -60,8 +74,28 @@
 		&_comment
 			height: 105px
 	
-	&__choice
+	&__custom
+		display: inline-block
+		width: 16px
+		height: 16px
 		margin-right: 10px
+		background-color: white
+		vertical-align: sub
+ 	
+		&_radio
+			border-radius: 50%
+
+	&__choice
+		display: none
+		
+		&_radio
+			&:checked + .order-section__label_choice::before
+				transform: translate(-50%, -50%) scale(1)
+				border-radius: 50%
+		&_check
+			&:checked + .order-section__label_choice::before
+				transform: translate(-50%, -50%) scale(1)
+
 
 	&__justify
 		display: inline-block
@@ -71,6 +105,7 @@
 			content: ''
 			display: inline-block
 			width: 100%
+
 	&__button
 		background-color: transparent
 		text-transform: capitalize

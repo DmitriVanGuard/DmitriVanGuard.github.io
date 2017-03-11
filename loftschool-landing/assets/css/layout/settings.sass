@@ -20,6 +20,13 @@ h1, h2, h3, h4, h5, h6, p
 	position: relative
 	margin: 0 auto
 
+.wrapper
+	&::after
+		content: ''
+		display: block
+		height: 60px
+		width: 100%
+
 .section
 	height: 100vh
 	min-width: 940px
