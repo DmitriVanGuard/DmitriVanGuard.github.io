@@ -6,6 +6,8 @@
 	<!-- <script src="assets/js/onepagescroll.js"></script> -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="assets/js/svg4everybody.min.js"></script>
+	<script>svg4everybody(); // run it now or whenever you are ready</script>
 </head>
 <body>
 	<div class="wrapper">
@@ -55,7 +57,11 @@
 									<p class="information-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis praesentium, corporis autem reprehenderit accusantium in tempore, sequi repellat obcaecati.</p>
 								</li>
 								<li class="information-section__item">
-									<img src="img/icons/hand.svg" alt="" class="information-section__icon">
+									<!-- <img src="img/icons/hand.svg" alt="" class="information-section__icon"> -->
+									<svg  class="icon">
+									 <use xlink:href="img/icons/sprites.svg#tw"></use>
+									</svg>
+
 									<h3 class="information-section__slogan">100% свежее мясо</h3>
 									<p class="information-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis praesentium, corporis autem reprehenderit accusantium in tempore, sequi repellat obcaecati.</p>
 								</li>
@@ -308,5 +314,6 @@
                                     // the browser's width is less than 600, the fallback will kick in.
 });
 	</script> -->
+	
 </body>
 </html>
