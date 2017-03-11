@@ -52,9 +52,9 @@
 						<div class="information-section__description-block">
 							<ul class="information-section__list">
 								<li class="information-section__item">
-									<!-- <img src="img/icons/meat.svg" alt="" class="information-section__icon"> -->
 									<svg  class="icon__meat information-section__icon">
 										<use xlink:href="img/icons/sprites.svg#meat"></use>
+
 									</svg>
 									<h3 class="information-section__slogan">100% свежее мясо</h3>
 									<p class="information-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis praesentium, corporis autem reprehenderit accusantium in tempore, sequi repellat obcaecati.</p>
@@ -70,7 +70,6 @@
 									<svg  class="icon__natural information-section__icon">
 										<use xlink:href="img/icons/sprites.svg#natural"></use>
 									</svg>
-									<!-- <img src="img/icons/natural.svg" alt="" class="information-section__icon"> -->
 									<h3 class="information-section__slogan">Натуральные ингредиенты</h3>
 									<p class="information-section__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti debitis praesentium, corporis autem reprehenderit accusantium in tempore, sequi repellat obcaecati.</p>
 								</li>
@@ -371,7 +370,9 @@
 			<div class="footer__right">
 				<ul class="socials">
 					<li class="socials__item"><i class="fa fa-vk" aria-hidden="true"></i></li>
-					<li class="socials__item socials__item_fb"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+					<li class="socials__item socials__item_fb"><svg  class="">
+										<use  class="icon__meat" xlink:href="img/icons/sprites.svg#fb"></use>
+									</svg></li>
 					<li class="socials__item"><i class="fa fa-instagram" aria-hidden="true"></i></li>
 					<li class="socials__item"><i class="fa fa-twitter" aria-hidden="true"></i></li>
 				</ul>
@@ -381,7 +382,7 @@
 		
 	<!-- <script src="assets/js/SvgAsChildSize.js"></script> -->
 	<script>
-		document.getElementsByClassName("arrow-slider__right")[0].lastElementChild.children[0].setAttribute("transform", "rotate(-90, 14.35, 14.5)")
+		document.getElementsByClassName("arrow-slider__right")[0].lastElementChild.children[0].setAttribute("transform", "rotate(-90, 14.35, 14.358)")
 		document.getElementsByClassName("arrow-slider__left")[0].lastElementChild.children[0].setAttribute("transform", "rotate(90, 7.24, 7.24)")
 	</script>
 </body>
