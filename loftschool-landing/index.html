@@ -5,6 +5,7 @@
 	<title>Document</title>
 	<!-- <script src="assets/js/onepagescroll.js"></script> -->
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 	<div class="wrapper">
@@ -136,7 +137,12 @@
 					</li>
 					<li class="menu-acco__item">
 						<div class="menu-acco__vertical-block">
-							<a href="#" class="menu-acco__trigger title">Для мясоедов</a>
+							<a href="#" class="menu-acco__trigger title">Вегетарианское</a>
+						</div>
+					</li>
+					<li class="menu-acco__item">
+						<div class="menu-acco__vertical-block">
+							<a href="#" class="menu-acco__trigger title">Диетическое</a>
 						</div>
 					</li>
 					
@@ -223,19 +229,19 @@
 									<input class="order-section__input" type="number">
 								</label>
 								<label class="order-section__label order-section__label_street">Улица<br/>
-									<input class="order-section__input" type="number">
+									<input class="order-section__input" type="text">
 								</label>
 								<div class="order-section__justify">
 									<label class="order-section__label order-section__label_mini">Улица<br/>
+										<input class="order-section__input" type="text">
+									</label>
+									<label class="order-section__label order-section__label_mini">Корпус<br/>
 										<input class="order-section__input" type="number">
 									</label>
-									<label class="order-section__label order-section__label_mini">Улица<br/>
+									<label class="order-section__label order-section__label_mini">Квартира<br/>
 										<input class="order-section__input" type="number">
 									</label>
-									<label class="order-section__label order-section__label_mini">Улица<br/>
-										<input class="order-section__input" type="number">
-									</label>
-									<label class="order-section__label order-section__label_mini">Улица<br/>
+									<label class="order-section__label order-section__label_mini">Этаж<br/>
 										<input class="order-section__input" type="number">
 									</label>
 								</div>
@@ -246,16 +252,16 @@
 									<textarea name="" id="" cols="30" rows="10" class="order-section__input order-section__input_comment"></textarea>
 								</label>
 								<label for="" class="order-section__label order-section__label_choice">
-									<input class="order-section__choice " type="radio">Потребуется сдача
+									<input class="order-section__choice " type="radio" name="payment" value="change">Потребуется сдача
 								</label>
 								<label for="" class="order-section__label order-section__label_choice">
-									<input class="order-section__choice " type="radio">Потребуется сдача
+									<input class="order-section__choice " type="radio" name="payment" value="credit-card">Оплата по карте
 								</label>
 								<label for="" class="order-section__label order-section__label_choice">
-									<input class="order-section__choice " type="checkbox">Потребуется сдача
+									<input class="order-section__choice " type="checkbox" value="callback">Не перезванивать
 								</label><br/>
 								<button class="btn-order">Заказать</button>
-								<button class="btn-order" type="reset">Очистить</button>
+								<button class="btn-order order-section__button" type="reset">Очистить</button>
 							</div>
 						</form>
 					</div>
@@ -269,8 +275,18 @@
 	<footer class="footer">
 		<div class="container">
 			<div class="footer__left">
-				<div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-				<a href="#" class="footer__phone">+7 (812) 377-13-77</a>
+				<div class="footer__contact-info">
+					<div class="footer__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+					<a href="#" class="footer__phone"><i class="fa fa-phone" aria-hidden="true"></i> +7 (812) 377-13-77</a>
+				</div>
+			</div>
+			<div class="footer__right">
+				<ul class="socials">
+					<li class="socials__item"><i class="fa fa-vk" aria-hidden="true"></i></li>
+					<li class="socials__item socials__item_fb"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+					<li class="socials__item"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+					<li class="socials__item"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+				</ul>
 			</div>
 		</div>
 	</footer>
