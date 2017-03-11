@@ -291,6 +291,9 @@ h1, h2, h3, h4, h5, h6, p {
 .icon__kkal {
   width: 60px;
   height: 60.1833px; }
+.icon__logo {
+  width: 98.265px;
+  height: 74.317px; }
 
 .nav:after, .order-section__content-block:after {
   content: "";
@@ -317,7 +320,7 @@ h1, h2, h3, h4, h5, h6, p {
     width: 450px;
     height: 358px; }
     .welcome-section__pic img {
-      display: none; }
+      visibility: hidden; }
   .welcome-section__title {
     color: #f9b43b;
     margin-bottom: 20px; }
@@ -327,12 +330,6 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 65px;
     line-height: 60px;
     font-weight: lighter; }
-
-.brand-logo {
-  width: 92px;
-  height: 69px;
-  display: inline-block;
-  vertical-align: middle; }
 
 .nav {
   padding-top: 12px; }
@@ -511,7 +508,7 @@ h1, h2, h3, h4, h5, h6, p {
   .kkal-block__amount {
     position: absolute;
     top: 58%;
-    left: 50%;
+    left: 52%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
@@ -779,7 +776,8 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
   font-size: 24px;
   vertical-align: middle;
-  margin-left: 16px; }
+  margin-left: 16px;
+  cursor: pointer; }
   .socials__item:hover {
     color: white; }
 
