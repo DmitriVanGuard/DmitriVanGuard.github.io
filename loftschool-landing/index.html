@@ -82,6 +82,16 @@
 			<section class="section offers-section">
 				<div class="container">
 					<div class="offers-section__content-block">
+						<div class="arrow-slider arrow-slider__left">
+							<svg class="">
+								<use  class="" xlink:href="img/icons/sprites.svg#arrow-scroll"></use>
+							</svg>
+						</div>
+						<div class="arrow-slider arrow-slider__right">
+							<svg class="">
+								<use transform="rotate(60, 50, 50)" class="" xlink:href="img/icons/sprites.svg#arrow-scroll"></use>
+							</svg>
+						</div>
 						<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center">
 							<img src="img/content/offers-section/burger-ink.png" alt="">
 						</div>
@@ -370,6 +380,9 @@
 	</footer>
 		
 	<script src="assets/js/SvgAsChildSize.js"></script>
-
+	<script>
+		document.getElementsByClassName("arrow-slider__right")[0].lastElementChild.children[0].setAttribute("transform", "rotate(-90, 14.35, 14.5)")
+		document.getElementsByClassName("arrow-slider__left")[0].lastElementChild.children[0].setAttribute("transform", "rotate(90, 7.24, 7.24)")
+	</script>
 </body>
 </html>
