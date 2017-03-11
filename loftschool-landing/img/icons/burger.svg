@@ -3,7 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="45.748px" height="44.625px" viewBox="0 0 45.748 44.625" enable-background="new 0 0 45.748 44.625" xml:space="preserve">
-<g>
+<symbol x="0px" y="0px"
+	 width="45.748px" height="44.625px" viewBox="0 0 45.748 44.625" id="burger">
 	<g>
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M8.502,31.551c-0.005-0.227-0.009-0.484-0.015-0.742
 			c0.044-0.023,0.088-0.045,0.133-0.068c0.069,0.152,0.167,0.297,0.201,0.457c0.05,0.23,0.127,0.496,0.056,0.701
@@ -192,5 +193,5 @@
 		c-0.091,0.004-0.181,0.008-0.271,0.012c0.036,0.495,0.071,0.99,0.107,1.485C26.81,20.73,26.866,20.719,26.92,20.708z"/>
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M4.147,0c-0.055,0.052-0.11,0.104-0.165,0.156
 		c0.382,0.412,0.764,0.822,1.146,1.234C5.168,1.349,5.208,1.309,5.25,1.268C4.882,0.846,4.515,0.422,4.147,0z"/>
-</g>
+</symbol>
 </svg>

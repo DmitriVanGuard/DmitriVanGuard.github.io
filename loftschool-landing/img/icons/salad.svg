@@ -3,7 +3,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="38px" height="38.638px" viewBox="0 0 38 38.638" enable-background="new 0 0 38 38.638" xml:space="preserve">
-<g>
+<symbol id="salad" x="0px" y="0px"
+	 width="38px" height="38.638px" viewBox="0 0 38 38.638" >
 	<g>
 		<path fill-rule="evenodd" clip-rule="evenodd" fill="#8BC03F" d="M11.954,35.416c-0.088-0.107-0.19-0.231-0.292-0.355
 			c0.013-0.027,0.025-0.055,0.039-0.084c0.092,0.048,0.195,0.081,0.273,0.146c0.113,0.093,0.252,0.192,0.296,0.317
@@ -174,5 +175,5 @@
 		C2.874,10.484,2.639,10.496,2.565,10.558z"/>
 	<path fill-rule="evenodd" clip-rule="evenodd" fill="#8BC03F" d="M17.577,0c-0.202,0.042-0.392,0.082-0.775,0.161
 		c0.389,0.314,0.635,0.511,0.826,0.666C17.61,0.541,17.594,0.284,17.577,0z"/>
-</g>
+</symbol>
 </svg>

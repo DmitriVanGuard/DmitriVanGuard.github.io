@@ -1,0 +1,68 @@
+.burger-dropdown
+	position: absolute
+	top: -10%
+	left: 0
+	text-align: center
+
+	&:hover
+		.burger-dropdown__table
+			left: 100%
+
+	&__wrapper
+		background-color: #e45028
+		position: relative
+		border-radius: 5px
+
+	&__icon-block
+		color: white
+		fill: white
+		padding: 15px 25px
+
+	&__text
+		font-family: 'gagalin'
+	
+	&__table
+		position: absolute
+		top: 0
+		left: -999px
+		background-color: rgba(255, 255, 255, 0.9)
+		border-radius: 5px
+		padding: 15px 15px 0 15px
+		display: block
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			right: 99%
+			top: 0
+			bottom: 0
+			width: 60px
+
+	&__row
+		&:first-child
+			padding-top: 15px
+
+		&:nth-of-type(n)
+			padding-bottom: 10px
+
+		&:last-child
+			padding-bottom: 15px
+
+	&__column
+
+		&_pic
+			padding-bottom: 10px
+
+		&_ingri
+			padding-left: 25px 
+			padding-bottom: 10px
+			padding-right: 70px
+			text-align: left
+			font-family: 'ubuntu_regular'
+
+		&_amount
+			padding-left: 20px 
+			padding-bottom: 10px
+			white-space: nowrap
+			font-family: 'ubuntu_light'

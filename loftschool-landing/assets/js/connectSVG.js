@@ -1,1 +1,0 @@
-var location = window.location.href
