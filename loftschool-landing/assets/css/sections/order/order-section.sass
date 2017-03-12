@@ -70,33 +70,46 @@
 		vertical-align: sub
 		position: relative
 
-		&::before
-			content: ''
-			display: inline-block
-			width: 11px
-			height: 9px
-			background-image: url("../../img/icons/check.svg")
-			background-size: contain
-			background-position: center
-			background-repeat: no-repeat
-			position: absolute
-			left: 50%
-			top: 50%
-			transform: translate(-50%, -50%) scale(0)
-			transition: transform 200ms
- 	
 		&_radio
 			border-radius: 50%
+
+			&::before
+				content: ''
+				border-radius: 50%
+				width: 8px
+				height: 8px
+				display: inline-block
+				position: absolute
+				background-color: #e45028
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%) scale(0)
+				transition: transform 200ms
+
+		&_check
+			&::before
+				content: ''
+				width: 11px
+				height: 9px
+				background-image: url("../../img/icons/check.svg")
+				background-size: contain
+				background-position: center
+				background-repeat: no-repeat
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%) scale(0)
+				transition: transform 200ms
 
 	&__choice
 		display: none
 		
 		&_radio
-			&:checked + .order-section__label_choice > span::before
+			&:checked + .order-section__label_choice > .order-section__custom_radio::before
 				transform: translate(-50%, -50%) scale(1)
-				border-radius: 50%
+				
 		&_check
-			&:checked + .order-section__label_choice > span::before
+			&:checked + .order-section__label_choice > .order-section__custom_check::before
 				transform: translate(-50%, -50%) scale(1)
 
 
