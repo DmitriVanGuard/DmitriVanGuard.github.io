@@ -1,0 +1,40 @@
+.fixed-list
+	position: fixed
+	top: 90px
+	right: 40px
+	z-index: 10
+
+	&__item
+		width: 8px
+		height: 8px
+		margin-bottom: 20px
+		background-color: white
+		border-radius: 50%
+		position: relative
+		cursor: pointer
+
+		&::before
+			content: ''
+			display: inline-block
+			width: 16px
+			height: 16px
+			position: absolute
+			bottom: 50%
+			right: 50%
+			transform: translate(50%, 50%)
+
+
+		&:hover > .fixed-list__link, .fixed-list__link:active 
+			transform: translate(50%, 50%) scale(1)
+
+	&__link
+		position: absolute
+		display: inline-block
+		width: 16px
+		height: 16px
+		border: 1px solid white
+		border-radius: 50%
+		bottom: 50%
+		right: 50%
+		transform: translate(50%, 50%) scale(0)
+		transition: transform 200ms
