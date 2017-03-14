@@ -79,6 +79,9 @@ reviewButton.forEach(function(item){
 			fragment = document.createDocumentFragment();
 
 		modalBox.classList.toggle("modal_active")
+
+		window.onwheel = window.ontouchmove = function(e){e.preventDefault()};
+
 		fragment.appendChild(reviewNameCopy);
 		fragment.appendChild(reviewTextCopy);
 		fragment.firstElementChild.classList.add("modal__title")
@@ -102,5 +105,6 @@ function modalAddListener(elem, name, text){
 			setTimeout(function(){modalContent.removeChild(name)}, 400);
 			setTimeout(function(){modalContent.removeChild(text)}, 400);
 			modalBox.classList.remove("modal_active");
+			window.onwheel = window.ontouchmove = null;
 		};
 }
