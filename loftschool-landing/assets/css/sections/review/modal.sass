@@ -1,0 +1,43 @@
+.modal
+	position: absolute
+	// left: -999px
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.5)
+	z-index: -1
+
+	&_active
+		z-index: 998
+		.modal__content
+			opacity: 1
+			z-index: 999
+
+	&__content
+		position: relative
+		background-color: #f9f9f9
+		box-sizing: border-box
+		width: 460px
+		padding: 25px 20px
+		border-radius: 10px
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+		transition: opacity 500ms
+
+	&__title
+		color: #444444
+		font-size: 14px
+		font-weight: lighter
+		margin-bottom: 20px
+
+	&__text
+		font-size: 13px
+
+	&__exit
+		position: absolute
+		color: #EA8367
+		top: 10px
+		right: 15px
+		font-size: 25px
+

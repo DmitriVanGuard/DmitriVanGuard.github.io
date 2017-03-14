@@ -59,3 +59,48 @@ teamTrigger.forEach(function(item){
 		// descBlock.style.width = descBlockText.clientWidth + "px";
 	})
 });
+
+
+
+//Modal box
+
+var reviewButton = document.querySelectorAll(".review-section__button"),
+	modalBox = document.querySelector(".modal"),
+	modalContent =  modalBox.firstElementChild,
+	modalExit = modalContent.firstElementChild 	;
+
+reviewButton.forEach(function(item){
+	item.addEventListener("click", function(){
+		var button = this,
+			reviewText = button.previousElementSibling,
+			reviewName = reviewText.previousElementSibling,
+			reviewTextCopy = reviewText.cloneNode(true),
+			reviewNameCopy = reviewName.cloneNode(true),
+			fragment = document.createDocumentFragment();
+
+		modalBox.classList.toggle("modal_active")
+		fragment.appendChild(reviewNameCopy);
+		fragment.appendChild(reviewTextCopy);
+		fragment.firstElementChild.classList.add("modal__title")
+		fragment.lastElementChild.classList.add("modal__text")
+		modalContent.appendChild(fragment);
+
+		modalBox.addEventListener("click", function(e){
+			modalContent.removeChild(reviewTextCopy);
+			modalContent.removeChild(reviewNameCopy);
+			modalBox.classList.remove("modal_active");
+		});
+
+		modalContent.addEventListener("click", function(e){
+			e.stopPropagation();
+		});
+
+		modalExit.addEventListener("click", function(e){
+			e.preventDefault();
+			modalContent.removeChild(reviewTextCopy);
+			modalContent.removeChild(reviewNameCopy);
+			modalBox.classList.remove("modal_active");
+		});
+	});
+});
+
