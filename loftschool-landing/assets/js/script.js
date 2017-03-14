@@ -99,8 +99,8 @@ reviewButton.forEach(function(item){
 function modalAddListener(elem, name, text){
 	elem.onclick = function(e){
 			e.preventDefault();
-			modalContent.removeChild(name);
-			modalContent.removeChild(text);
+			setTimeout(function(){modalContent.removeChild(name)}, 400);
+			setTimeout(function(){modalContent.removeChild(text)}, 400);
 			modalBox.classList.remove("modal_active");
 		};
 }
