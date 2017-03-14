@@ -19,6 +19,7 @@
 		background-image: url("../../img/content/menu-section/meat-eater.jpg")
 		background-repeat: no-repeat
 		background-size: cover
+		float: left
 
 	&__trigger
 		color: white
@@ -38,17 +39,21 @@
 
 	
 	&__description
-		width: 550px
+		width: 0
+		overflow: hidden
+		overflow-wrap: break-word
 		height: 100%
-		float: right
+		float: left
 		position: relative
-		padding: 60px 30px
-		box-sizing: border-box
 		background-color: rgba(0, 0, 0, 0.7)
+		transition: width 400ms
 
 	&__text
 		position: relative
 		color: white
+		box-sizing: border-box
+		width: 550px
 		z-index: 1
+		padding: 60px 55px
 		font-family: 'ubuntu_light'
 		line-height: 24px
