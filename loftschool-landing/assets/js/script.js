@@ -7,7 +7,6 @@ accoTrigger.forEach(function(item){
 		var element = this,
 			elementsParent = element.parentNode,
 			descBlock = elementsParent.nextElementSibling,
-			// descBlockWidth = descBlock.style.width,
 			descBlockText = descBlock.firstElementChild;
 			
 		if(element.classList.contains("menu-acco__trigger_active")){
@@ -16,12 +15,46 @@ accoTrigger.forEach(function(item){
 		}else{
 			descBlocksArray.forEach(function(item){
 				item.style.width = 0;
-				// console.log(item);
 				item.previousElementSibling.firstElementChild.classList.remove("menu-acco__trigger_active");
 			});
 
 			descBlock.style.width = descBlockText.clientWidth + "px";
 			element.classList.add("menu-acco__trigger_active");
+		}
+	})
+});
+
+
+
+
+
+
+
+// team section
+var teamTrigger = document.querySelectorAll(".acco__trigger"),
+	personBlocksArray = document.querySelectorAll(".acco__item");
+
+teamTrigger.forEach(function(item){
+	item.addEventListener("click", function(e){
+		e.preventDefault();
+		var element = this,
+			elementTriangle = element.firstElementChild,
+			elementSibling = element.nextElementSibling,
+			elementSiblingContent = elementSibling.firstElementChild;
+			
+		if(element.classList.contains("acco__trigger_active")){
+			elementSibling.style.height = 0;
+			// elementTriangle.style.transform = "rotateX(0deg)"
+			element.classList.remove("acco__trigger_active");
+		}else{
+			personBlocksArray.forEach(function(item){
+				item.lastElementChild.style.height = 0;
+				item.firstElementChild.classList.remove("acco__trigger_active");
+			});
+
+			// elementTriangle.style.transform = "rotateX(0deg)"
+			elementSibling.style.height = elementSiblingContent.clientHeight + "px";
+			element.classList.add("acco__trigger_active");
 		}
 		// descBlock.style.width = descBlockText.clientWidth + "px";
 	})
