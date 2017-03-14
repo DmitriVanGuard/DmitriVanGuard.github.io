@@ -85,22 +85,22 @@ reviewButton.forEach(function(item){
 		fragment.lastElementChild.classList.add("modal__text")
 		modalContent.appendChild(fragment);
 
-		modalBox.addEventListener("click", function(e){
-			modalContent.removeChild(reviewTextCopy);
-			modalContent.removeChild(reviewNameCopy);
-			modalBox.classList.remove("modal_active");
-		});
+		modalAddListener(modalExit, reviewNameCopy, reviewTextCopy);
+		modalAddListener(modalBox, reviewNameCopy, reviewTextCopy);
 
 		modalContent.addEventListener("click", function(e){
 			e.stopPropagation();
 		});
 
-		modalExit.addEventListener("click", function(e){
-			e.preventDefault();
-			modalContent.removeChild(reviewTextCopy);
-			modalContent.removeChild(reviewNameCopy);
-			modalBox.classList.remove("modal_active");
-		});
 	});
 });
 
+
+function modalAddListener(elem, name, text){
+	elem.onclick = function(e){
+			e.preventDefault();
+			modalContent.removeChild(name);
+			modalContent.removeChild(text);
+			modalBox.classList.remove("modal_active");
+		};
+}
