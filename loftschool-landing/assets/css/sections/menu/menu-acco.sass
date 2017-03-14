@@ -21,15 +21,17 @@
 		background-size: cover
 
 	&__trigger
-		position: absolute
-		transform: rotate(180deg)
 		color: white
 		text-align: center
-		top: 0
-		bottom: 0 
-		writing-mode: vertical-lr
 		font-size: 40px
 		line-height: 80px
+		min-width: 650px
+		width: 100vh
+		white-space: nowrap
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%) rotate(-90deg)
 
 		&_active
 			color: #f9b43b
