@@ -25,11 +25,6 @@ accoTrigger.forEach(function(item){
 });
 
 
-
-
-
-
-
 // team section
 var teamTrigger = document.querySelectorAll(".acco__trigger"),
 	personBlocksArray = document.querySelectorAll(".acco__item");
@@ -63,7 +58,6 @@ teamTrigger.forEach(function(item){
 
 
 //Modal box
-
 var reviewButton = document.querySelectorAll(".review-section__button"),
 	modalBox = document.querySelector(".modal"),
 	modalContent =  modalBox.firstElementChild,
@@ -107,4 +101,47 @@ function modalAddListener(elem, name, text){
 			modalBox.classList.remove("modal_active");
 			window.onwheel = window.ontouchmove = null;
 		};
+}
+
+//Slider
+
+var arrowArray = document.querySelectorAll(".arrow-slider"),
+	burgerSlider = document.querySelector(".burger-slider__list"),
+	burgerSliderItems = document.querySelectorAll(".burger-slider__item"),
+	slidesCount = burgerSliderItems.length,
+	width = 0;
+
+	if(slidesCount > 1){
+		firstSlideClone = burgerSliderItems[0].cloneNode(true);
+		lastSlideClone = burgerSliderItems[slidesCount - 1].cloneNode(true);
+		burgerSlider.appendChild(firstSlideClone);
+		burgerSlider.insertBefore(lastSlideClone, burgerSlider.firstElementChild);
+		slidesCount += 2;
+	}
+
+
+arrowArray.forEach(function(item){
+	sliderDirection(item);
+});
+
+function sliderDirection(arrow){
+	var slideToShow;
+	if(arrow.classList.contains('arrow-slider__right')){
+		arrow.addEventListener("click", function(){
+			width -= 940;
+			console.log("right", width);
+			moveSlides(width + "px");
+
+		});
+	}else{
+		arrow.addEventListener("click", function(){
+			width += 940;
+			console.log("left", width);
+			moveSlides(width + "px");
+		});
+	}
+}
+
+function moveSlides(amount){
+	burgerSlider.style.transform = "translateX(" + amount + ")";
 }
