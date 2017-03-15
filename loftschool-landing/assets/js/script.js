@@ -109,14 +109,13 @@ var arrowArray = document.querySelectorAll(".arrow-slider"),
 	burgerSlider = document.querySelector(".burger-slider__list"),
 	burgerSliderItems = document.querySelectorAll(".burger-slider__item"),
 	slidesCount = burgerSliderItems.length,
-	width = 0;
+	width = 0,
+	currentSlideNumber = 1;
 
 	if(slidesCount > 1){
 		firstSlideClone = burgerSliderItems[0].cloneNode(true);
-		lastSlideClone = burgerSliderItems[slidesCount - 1].cloneNode(true);
 		burgerSlider.appendChild(firstSlideClone);
-		burgerSlider.insertBefore(lastSlideClone, burgerSlider.firstElementChild);
-		slidesCount += 2;
+		slidesCount++;
 	}
 
 
@@ -128,20 +127,45 @@ function sliderDirection(arrow){
 	var slideToShow;
 	if(arrow.classList.contains('arrow-slider__right')){
 		arrow.addEventListener("click", function(){
-			width -= 940;
-			console.log("right", width);
-			moveSlides(width + "px");
-
+			
+			currentSlide(true);
+			// console.log("right", width);
 		});
 	}else{
 		arrow.addEventListener("click", function(){
-			width += 940;
-			console.log("left", width);
-			moveSlides(width + "px");
+			currentSlide(false);
+			// console.log("left", width);
 		});
 	}
 }
 
+function currentSlide(change){
+	change ? (
+			currentSlideNumber++,
+			width -= 940,
+			moveSlides(width)
+		) : (
+			currentSlideNumber--,
+			width += 940,
+			moveSlides(width)
+			);
+	console.log(currentSlideNumber);
+}
+
 function moveSlides(amount){
-	burgerSlider.style.transform = "translateX(" + amount + ")";
+	if(currentSlideNumber > slidesCount){
+		burgerSlider.classList.add("burger-slider__list_moving");
+		width = amount= -940;
+		currentSlideNumber = 2;
+		burgerSlider.style.transform = "translateX(" + 0 + "px)";
+		setTimeout(function(){
+			burgerSlider.classList.remove("burger-slider__list_moving");
+		}, 40);
+	}
+	console.log(amount);
+
+	
+	setTimeout(function(){
+		burgerSlider.style.transform = "translateX(" + amount + "px)";
+	}, 50);
 }
