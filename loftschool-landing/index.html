@@ -105,143 +105,100 @@
 							<div class="burger-slider">
 								
 								<ul class="burger-slider__list">
-
-									<li class="burger-slider__item burger-slider__item_active">
-										<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center; background-repeat: no-repeat;">
-										<img src="img/content/offers-section/burger-ink.png" alt="">
-										</div>
-										<div class="offers-section__description-block">
-											<h1 class="title offers-section__burger-title">Dark Beef Burger 1</h1>
-											<p class="offers-section__burger-review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At vero corrupti officiis id quam voluptatibus necessitatibus magnam beatae laudantium voluptatem quae, et ipsum eveniet, perspiciatis corporis, velit atque porro, possimus.</p>
-											<h2 class="offers-section__burger-price title">500 <span>рублей</span></h2>
-											<button class="btn-order brn-order_baseline">Заказать</button>
-										</div>
-									</li>
-									<li class="burger-slider__item">
-										<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center; background-repeat: no-repeat;">
-										<img src="img/content/offers-section/burger-ink.png" alt="">
-										</div>
-										<div class="offers-section__description-block">
-											<h1 class="title offers-section__burger-title">Dark Beef Burger 2</h1>
-											<p class="offers-section__burger-review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At vero corrupti officiis id quam voluptatibus necessitatibus magnam beatae laudantium voluptatem quae, et ipsum eveniet, perspiciatis corporis, velit atque porro, possimus.</p>
-											<h2 class="offers-section__burger-price title">500 <span>рублей</span></h2>
-											<button class="btn-order brn-order_baseline">Заказать</button>
-										</div>
-									</li>
-									<li class="burger-slider__item">
-										<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center; background-repeat: no-repeat;">
-										<img src="img/content/offers-section/burger-ink.png" alt="">
-										</div>
-										<div class="offers-section__description-block">
-											<h1 class="title offers-section__burger-title">Dark Beef Burger 3</h1>
-											<p class="offers-section__burger-review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At vero corrupti officiis id quam voluptatibus necessitatibus magnam beatae laudantium voluptatem quae, et ipsum eveniet, perspiciatis corporis, velit atque porro, possimus.</p>
-											<h2 class="offers-section__burger-price title">500 <span>рублей</span></h2>
-											<button class="btn-order brn-order_baseline">Заказать</button>
-										</div>
-									</li>
-									<li class="burger-slider__item">
-										<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center; background-repeat: no-repeat;">
-										<img src="img/content/offers-section/burger-ink.png" alt="">
-										</div>
-										<div class="offers-section__description-block">
-											<h1 class="title offers-section__burger-title">Dark Beef Burger 4</h1>
-											<p class="offers-section__burger-review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At vero corrupti officiis id quam voluptatibus necessitatibus magnam beatae laudantium voluptatem quae, et ipsum eveniet, perspiciatis corporis, velit atque porro, possimus.</p>
-											<h2 class="offers-section__burger-price title">500 <span>рублей</span></h2>
-											<button class="btn-order brn-order_baseline">Заказать</button>
-										</div>
-									</li>
-									<li class="burger-slider__item">
-										<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center; background-repeat: no-repeat;">
-										<img src="img/content/offers-section/burger-ink.png" alt="">
-										</div>
-										<div class="offers-section__description-block">
-											<h1 class="title offers-section__burger-title">Dark Beef Burger 5</h1>
-											<p class="offers-section__burger-review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At vero corrupti officiis id quam voluptatibus necessitatibus magnam beatae laudantium voluptatem quae, et ipsum eveniet, perspiciatis corporis, velit atque porro, possimus.</p>
-											<h2 class="offers-section__burger-price title">500 <span>рублей</span></h2>
-											<button class="btn-order brn-order_baseline">Заказать</button>
-										</div>
-									</li>
-
+									<div class="burger-slider__wrapper">
+										<li class="burger-slider__item burger-slider__item_active">
+											<div class="burger-dropdown">
+												<div class="burger-dropdown__wrapper">
+													<div class="burger-dropdown__icon-block">
+														<svg  class="icon__burger">
+															<use  class="" xlink:href="img/icons/sprites.svg#burger"></use>
+														</svg>
+														<div class="burger-dropdown__text">Состав</div>
+													</div>
+													<table class="burger-dropdown__table">
+														<tr class="burger-dropdown__row">
+															<td class="burger-dropdown__column burger-dropdown__column_pic">
+																<svg  class="icon__beef">
+																	<use  class="" xlink:href="img/icons/sprites.svg#beef"></use>
+																</svg>
+															</td>
+															<td class="burger-dropdown__column burger-dropdown__column_ingri">Говядина</td>
+															<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
+														</tr>
+														<tr class="burger-dropdown__row">
+															<td class="burger-dropdown__column burger-dropdown__column_pic">
+																<svg  class="icon__buns">
+																	<use  class="" xlink:href="img/icons/sprites.svg#buns"></use>
+																</svg>
+															</td>
+															<td class="burger-dropdown__column burger-dropdown__column_ingri">Булочки</td>
+															<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
+														</tr>
+														<tr class="burger-dropdown__row">
+															<td class="burger-dropdown__column burger-dropdown__column_pic">
+																<svg  class="icon__salad">
+																	<use  class="" xlink:href="img/icons/sprites.svg#salad"></use>
+																</svg>
+															</td>
+															<td class="burger-dropdown__column burger-dropdown__column_ingri">Зелень</td>
+															<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
+														</tr>
+														<tr class="burger-dropdown__row">
+															<td class="burger-dropdown__column burger-dropdown__column_pic">
+																<svg  class="icon__sauce">
+																	<use  class="" xlink:href="img/icons/sprites.svg#sauce"></use>
+																</svg>
+															</td>
+															<td class="burger-dropdown__column burger-dropdown__column_ingri">Соус</td>
+															<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
+														</tr>
+														<tr class="burger-dropdown__row">
+															<td class="burger-dropdown__column burger-dropdown__column_pic">
+																<svg  class="icon__cucumber">
+																	<use  class="" xlink:href="img/icons/sprites.svg#cucumber"></use>
+																</svg>
+															</td>
+															<td class="burger-dropdown__column burger-dropdown__column_ingri">Овощи</td>
+															<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
+														</tr>
+														<tr class="burger-dropdown__row">
+															<td class="burger-dropdown__column burger-dropdown__column_pic">
+																<svg  class="icon__cheese">
+																	<use  class="" xlink:href="img/icons/sprites.svg#cheese"></use>
+																</svg>
+															</td>
+															<td class="burger-dropdown__column burger-dropdown__column_ingri">Сыр</td>
+															<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div class="offers-section__burger-pic" style="background: url(img/content/offers-section/burger-ink.png) center center; background-repeat: no-repeat;">
+											<img src="img/content/offers-section/burger-ink.png" alt="">
+											</div>
+											<div class="offers-section__description-block">
+												<h1 class="title offers-section__burger-title">Dark Beef Burger 1</h1>
+												<p class="offers-section__burger-review">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At vero corrupti officiis id quam voluptatibus necessitatibus magnam beatae laudantium voluptatem quae, et ipsum eveniet, perspiciatis corporis, velit atque porro, possimus.</p>
+												<h2 class="offers-section__burger-price title">500 <span>рублей</span></h2>
+												<button class="btn-order brn-order_baseline">Заказать</button>
+											</div>
+											<div class="kkal-block">
+												<div class="kkal-block__icon">
+													<svg class="icon__kkal">
+														<use  class="" xlink:href="img/icons/sprites.svg#kkal"></use>
+													</svg>
+													<h3 class="kkal-block__amount">1200</h3>
+												</div>
+												<h4 class="kkal-block__text">ККАЛ</h4>
+											</div>
+										</li>
+									</div>
 								</ul>
 							</div>
 							
 
-							<div class="burger-dropdown">
-								<div class="burger-dropdown__wrapper">
-									<div class="burger-dropdown__icon-block">
-										<svg  class="icon__burger">
-											<use  class="" xlink:href="img/icons/sprites.svg#burger"></use>
-										</svg>
-										<div class="burger-dropdown__text">Состав</div>
-									</div>
-									<table class="burger-dropdown__table">
-										<tr class="burger-dropdown__row">
-											<td class="burger-dropdown__column burger-dropdown__column_pic">
-												<svg  class="icon__beef">
-													<use  class="" xlink:href="img/icons/sprites.svg#beef"></use>
-												</svg>
-											</td>
-											<td class="burger-dropdown__column burger-dropdown__column_ingri">Говядина</td>
-											<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
-										</tr>
-										<tr class="burger-dropdown__row">
-											<td class="burger-dropdown__column burger-dropdown__column_pic">
-												<svg  class="icon__buns">
-													<use  class="" xlink:href="img/icons/sprites.svg#buns"></use>
-												</svg>
-											</td>
-											<td class="burger-dropdown__column burger-dropdown__column_ingri">Булочки</td>
-											<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
-										</tr>
-										<tr class="burger-dropdown__row">
-											<td class="burger-dropdown__column burger-dropdown__column_pic">
-												<svg  class="icon__salad">
-													<use  class="" xlink:href="img/icons/sprites.svg#salad"></use>
-												</svg>
-											</td>
-											<td class="burger-dropdown__column burger-dropdown__column_ingri">Зелень</td>
-											<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
-										</tr>
-										<tr class="burger-dropdown__row">
-											<td class="burger-dropdown__column burger-dropdown__column_pic">
-												<svg  class="icon__sauce">
-													<use  class="" xlink:href="img/icons/sprites.svg#sauce"></use>
-												</svg>
-											</td>
-											<td class="burger-dropdown__column burger-dropdown__column_ingri">Соус</td>
-											<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
-										</tr>
-										<tr class="burger-dropdown__row">
-											<td class="burger-dropdown__column burger-dropdown__column_pic">
-												<svg  class="icon__cucumber">
-													<use  class="" xlink:href="img/icons/sprites.svg#cucumber"></use>
-												</svg>
-											</td>
-											<td class="burger-dropdown__column burger-dropdown__column_ingri">Овощи</td>
-											<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
-										</tr>
-										<tr class="burger-dropdown__row">
-											<td class="burger-dropdown__column burger-dropdown__column_pic">
-												<svg  class="icon__cheese">
-													<use  class="" xlink:href="img/icons/sprites.svg#cheese"></use>
-												</svg>
-											</td>
-											<td class="burger-dropdown__column burger-dropdown__column_ingri">Сыр</td>
-											<td class="burger-dropdown__column burger-dropdown__column_amount">300 г</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-							<div class="kkal-block">
-								<div class="kkal-block__icon">
-									<svg class="icon__kkal">
-										<use  class="" xlink:href="img/icons/sprites.svg#kkal"></use>
-									</svg>
-									<h3 class="kkal-block__amount">1200</h3>
-								</div>
-
-								<h4 class="kkal-block__text">ККАЛ</h4>
-							</div>
+							
+							
 						</div>
 					</div>
 				</section>
