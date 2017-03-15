@@ -108,15 +108,17 @@ function modalAddListener(elem, name, text){
 var arrowArray = document.querySelectorAll(".arrow-slider"),
 	burgerSlider = document.querySelector(".burger-slider__list"),
 	burgerSliderItems = document.querySelectorAll(".burger-slider__item"),
-	slidesCount = burgerSliderItems.length,
-	width = 0,
-	currentSlideNumber = 1;
+	slidesCount = burgerSliderItems.length + 1,
+	slideToAmount = 0,
+	currentSlideNumber = 1,
+	lastSlideOffset = -940 * (slidesCount - 1);
 
 	if(slidesCount > 1){
 		firstSlideClone = burgerSliderItems[0].cloneNode(true);
 		burgerSlider.appendChild(firstSlideClone);
-		slidesCount++;
 	}
+
+	burgerSlider.style.width = 940 * slidesCount + "px";
 
 
 arrowArray.forEach(function(item){
@@ -142,25 +144,25 @@ function sliderDirection(arrow){
 function currentSlide(change){
 	change ? (
 			currentSlideNumber++,
-			width -= 940,
-			moveSlides(width)
+			slideToAmount -= 940,
+			moveSlides(slideToAmount)
 		) : (
 			currentSlideNumber--,
-			width += 940,
-			moveSlides(width)
+			slideToAmount += 940,
+			moveSlides(slideToAmount)
 			);
 	console.log(currentSlideNumber);
 }
 
 function moveSlides(amount){
 	if(currentSlideNumber > slidesCount){
-		burgerSlider.classList.add("burger-slider__list_moving");
-		width = amount= -940;
-		currentSlideNumber = 2;
-		burgerSlider.style.transform = "translateX(" + 0 + "px)";
-		setTimeout(function(){
-			burgerSlider.classList.remove("burger-slider__list_moving");
-		}, 40);
+		infinitySlide(0);
+		amount = -940;
+	}
+	else if(currentSlideNumber === 0){
+
+		infinitySlide(lastSlideOffset);
+		amount = -940;
 	}
 	console.log(amount);
 
@@ -168,4 +170,14 @@ function moveSlides(amount){
 	setTimeout(function(){
 		burgerSlider.style.transform = "translateX(" + amount + "px)";
 	}, 50);
+}
+
+function infinitySlide(hiddenTranslate){
+	burgerSlider.classList.add("burger-slider__list_moving");
+	slideToAmount = -940;
+	currentSlideNumber = 2;
+	burgerSlider.style.transform = "translateX(" + hiddenTranslate + "px)";
+	setTimeout(function(){
+		burgerSlider.classList.remove("burger-slider__list_moving");
+	}, 30);
 }
