@@ -113,12 +113,12 @@ var arrowArray = document.querySelectorAll(".arrow-slider"),
 	currentSlideNumber = 1,
 	lastSlideOffset = -940 * (slidesCount - 1);
 
-	if(slidesCount > 1){
-		firstSlideClone = burgerSliderItems[0].cloneNode(true);
-		burgerSlider.appendChild(firstSlideClone);
-	}
+if(slidesCount > 1){
+	firstSlideClone = burgerSliderItems[0].cloneNode(true);
+	burgerSlider.appendChild(firstSlideClone);
+}
 
-	burgerSlider.style.width = 940 * slidesCount + "px";
+burgerSlider.style.width = 940 * slidesCount + "px";
 
 
 arrowArray.forEach(function(item){
@@ -129,14 +129,11 @@ function sliderDirection(arrow){
 	var slideToShow;
 	if(arrow.classList.contains('arrow-slider__right')){
 		arrow.addEventListener("click", function(){
-			
 			currentSlide(true);
-			// console.log("right", width);
 		});
 	}else{
 		arrow.addEventListener("click", function(){
 			currentSlide(false);
-			// console.log("left", width);
 		});
 	}
 }
@@ -151,33 +148,29 @@ function currentSlide(change){
 			slideToAmount += 940,
 			moveSlides(slideToAmount)
 			);
-	console.log(currentSlideNumber);
 }
 
 function moveSlides(amount){
 	if(currentSlideNumber > slidesCount){
-		infinitySlide(0);
-		amount = -940;
+		infinitySlide(0, -940);
+		// amount = -940;
 	}
 	else if(currentSlideNumber === 0){
-
-		infinitySlide(lastSlideOffset);
-		amount = -940;
+		infinitySlide(lastSlideOffset, lastSlideOffset + 940);
+		// amount = -940;
 	}
-	console.log(amount);
-
-	
-	setTimeout(function(){
+	else{
 		burgerSlider.style.transform = "translateX(" + amount + "px)";
-	}, 50);
+	}
 }
 
-function infinitySlide(hiddenTranslate){
+function infinitySlide(hiddenTranslate, nextSlide){
 	burgerSlider.classList.add("burger-slider__list_moving");
-	slideToAmount = -940;
-	currentSlideNumber = 2;
+	slideToAmount = nextSlide;
+	currentSlideNumber = Math.abs(nextSlide) / 940 + 1;
 	burgerSlider.style.transform = "translateX(" + hiddenTranslate + "px)";
 	setTimeout(function(){
 		burgerSlider.classList.remove("burger-slider__list_moving");
+		burgerSlider.style.transform = "translateX(" + nextSlide + "px)";
 	}, 30);
 }
