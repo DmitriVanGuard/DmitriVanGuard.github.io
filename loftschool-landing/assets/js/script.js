@@ -78,7 +78,7 @@ reviewButton.forEach(function(item){
 
 		modalBox.classList.toggle("modal_active")
 
-		window.onwheel = window.ontouchmove = function(e){e.preventDefault()};
+		scrollToggle = false;
 
 		fragment.appendChild(reviewNameCopy);
 		fragment.appendChild(reviewTextCopy);
@@ -103,7 +103,7 @@ function modalAddListener(elem, name, text){
 			setTimeout(function(){modalContent.removeChild(name)}, 400);
 			setTimeout(function(){modalContent.removeChild(text)}, 400);
 			modalBox.classList.remove("modal_active");
-			window.onwheel = window.ontouchmove = null;
+			scrollToggle = true;
 		};
 }
 
@@ -164,7 +164,7 @@ function moveSlides(amount){
 		infinitySlide(lastSlideOffset, lastSlideOffset + 940);
 	}
 	else{
-		burgerSlider.style.transform = "translateX(" + amount + "px)";
+		setTimeout(function(){burgerSlider.style.transform = "translateX(" + amount + "px)";}, 40);
 	}
 	burgerSliderItems.forEach(function(item){
 		item.classList.remove("burger-slider__item_active");
@@ -180,7 +180,46 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	setTimeout(function(){
 		burgerSlider.classList.remove("burger-slider__list_moving");
 		burgerSlider.style.transform = "translateX(" + nextSlide + "px)";
-	}, 30);
+	}, 40);
 }
 
+//One Page scroll
+
+	document.body.style.overflowY="hidden"
+	var mainWrapper = document.querySelector(".main"),
+	sectionArray = document.querySelectorAll("section"),
+	sectionHeight = sectionArray[0].clientHeight,
+	sectionCount = sectionArray.length,
+	currentSection = 1,
+	newSlidePosition = 0,
+	scrollToggle = true;
+
+	window.addEventListener("wheel", function(e){
+
+		if(e.deltaY > 0 && scrollToggle && currentSection != sectionCount){
+			console.log("down");
+			currentSection++;
+			scrollToggle = false;
+			onePageScroll(true);
+		}
+		else if(e.deltaY < 0 && scrollToggle && currentSection != 1){
+			currentSection--;
+			scrollToggle = false;
+			onePageScroll(false);
+			console.log("up");
+		}
+
+	});
+
+	function onePageScroll(where){
+		if(where){
+			newSlidePosition -= sectionHeight
+		}else{
+			newSlidePosition += sectionHeight
+		}
+		console.log(currentSection);
+		mainWrapper.style.transform="translateY("+ newSlidePosition +"px)";
+		setTimeout(function(){scrollToggle = true;}, 700);
+	}
 })();
+
