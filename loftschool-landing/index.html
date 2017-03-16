@@ -567,7 +567,7 @@
 										<input class="order-section__input" type="text">
 									</label>
 									<label class="order-section__label order-section__label_phone">Телефон<br/>
-										<input class="order-section__input" type="number">
+										<input class="order-section__input" id="phone" data-inputmask="'alias': 'phone'" type="tel">
 									</label>
 									<label class="order-section__label order-section__label_street">Улица<br/>
 										<input class="order-section__input" type="text">
@@ -635,6 +635,16 @@
 				</div>
 			</div>
 		</footer>
+		<script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" 
+  crossorigin="anonymous"></script>
 		<script src="assets/js/script.js"></script>
+		<script src="assets/js/inputmask/jquery.maskedinput.js"></script>
+		<script>
+			jQuery(function($){
+			   $("#phone").mask("+7 (999) 999 99 99");
+			});
+		</script>
 	</body>
 </html>
