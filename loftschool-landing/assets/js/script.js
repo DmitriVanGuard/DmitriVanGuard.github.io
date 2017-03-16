@@ -161,7 +161,7 @@ function moveSlides(amount){
 		infinitySlide(lastSlideOffset, lastSlideOffset + 940);
 	}
 	else{
-		setTimeout(function(){burgerSlider.style.transform = "translateX(" + amount + "px)";}, 40);
+		setTimeout(function(){burgerSlider.style.transform = "translate3d(" + amount + "px, 0, 0)";}, 40);
 	}
 	burgerSliderItems.forEach(function(item){
 		item.classList.remove("burger-slider__item_active");
@@ -173,10 +173,10 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	burgerSlider.classList.add("burger-slider__list_moving");
 	slideToAmount = nextSlide;
 	currentSlideNumber = Math.abs(nextSlide) / 940 + 1;
-	burgerSlider.style.transform = "translateX(" + hiddenTranslate + "px)";
+	burgerSlider.style.transform = "translate3d(" + hiddenTranslate + "px, 0, 0)";
 	setTimeout(function(){
 		burgerSlider.classList.remove("burger-slider__list_moving");
-		burgerSlider.style.transform = "translateX(" + nextSlide + "px)";
+		burgerSlider.style.transform = "translate3d( " + nextSlide + "px, 0, 0)";
 	}, 40);
 }
 
@@ -215,7 +215,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		}
 	});
 	function onePageScroll(){
-		mainWrapper.style.transform="translateY("+ newSlidePosition +"px)";
+		mainWrapper.style.transform="translate3d(0, "+ newSlidePosition +"px, 0px)";
 		removeFixedListActive();
 		fixedLinksArray[currentSection - 1].classList.add("fixed-list__item_active");
 		setTimeout(function(){
