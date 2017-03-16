@@ -9,17 +9,17 @@
 	</head>
 	<body>
 			<ul class="fixed-list">
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="welcome" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="info" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="offers" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="team" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="menu" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="review" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="order" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="map" class="fixed-list__link"></a></li>
 			</ul>
 		<div class="main">
-			<section class="section welcome-section">
+			<section id="welcome" class="section welcome-section">
 				<div class="container">
 					<nav class="nav">
 						<div class="nav__left">
@@ -30,12 +30,12 @@
 
 						<div class="nav__right">
 							<ul class="nav__list">
-								<li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-								<li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
-								<li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-								<li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-								<li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-								<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+								<li class="nav__item"><a href="#" data-href="info" class="nav__link">О нас</a></li>
+								<li class="nav__item"><a href="#" data-href="offers" class="nav__link">Бургеры</a></li>
+								<li class="nav__item"><a href="#" data-href="team" class="nav__link">Команда</a></li>
+								<li class="nav__item"><a href="#" data-href="menu" class="nav__link">Меню</a></li>
+								<li class="nav__item"><a href="#" data-href="review" class="nav__link">Отзывы</a></li>
+								<li class="nav__item"><a href="#" data-href="map" class="nav__link">Контакты</a></li>
 							</ul>
 							<button class="btn-order">Заказать</button>
 						</div>
@@ -54,7 +54,7 @@
 
 				</div>
 			</section>
-			<section class="section information-section">
+			<section id="info" class="section information-section">
 				<div class="container">
 					<div class="information-section__content-block">
 						<h1 class="title information-section__title">Мы лучшие</h1>
@@ -86,7 +86,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section offers-section">
+			<section id="offers" class="section offers-section">
 				<div class="container">
 					<div class="offers-section__content-block">
 						<div class="arrow-slider arrow-slider__left">
@@ -366,7 +366,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section team-section">
+			<section id="team" class="section team-section">
 				<div class="acco">
 					<div class="acco__content-block">
 						<h1 class="acco__title title">Команда</h1>
@@ -429,7 +429,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section menu-section">
+			<section id="menu" class="section menu-section">
 				<h1 class="menu-section__title title">МЕНЮ</h1>
 				<ul class="menu-acco__list">
 					<li class="menu-acco__item">
@@ -462,10 +462,9 @@
 							</p>
 						</div>
 					</li>
-					
 				</ul>
 			</section>
-			<section class="section review-section">
+			<section id="review" class="section review-section">
 				<div class="modal">
 					<div class="modal__content">
 						<a href="#" class="modal__exit"><i class="fa fa-times" aria-hidden="true"></i></a>
@@ -554,7 +553,7 @@
 					</li>
 				</ul>
 			</section>
-			<section class="section order-section">
+			<section id="order" class="section order-section">
 				<div class="container">
 					<div class="order-section__content-block">
 						<h1 class="title order-section__title">Закажите доставку</h1>
@@ -608,7 +607,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section map-section">
+			<section id="map" class="section map-section">
 				<footer class="footer">
 					<div class="container">
 						<div class="footer__left">
@@ -630,7 +629,18 @@
 			</section>
 		</div>
 		
-		
+		<script>
+			var sectionList = {
+				welcome: 0,
+				info: 1,
+				offers: 2,
+				team: 3,
+				menu: 4,
+				review: 5,
+				order: 6,
+				map: 7
+			};
+		</script>
 
 		<script
   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
@@ -643,8 +653,5 @@
 			   $("#phone").mask("+7 (999) 999 99 99");
 			});
 		</script>
-<!-- 		<script type="text/javascript">
-
-		</script> -->
 	</body>
 </html>

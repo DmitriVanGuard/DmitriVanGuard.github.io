@@ -192,34 +192,48 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	sectionCount = sectionArray.length,
 	currentSection = 1,
 	newSlidePosition = 0,
-	scrollToggle = true;
+	scrollToggle = true,
+	fixedLinksArray = document.querySelectorAll(".fixed-list");
 
 	window.addEventListener("wheel", function(e){
 
 		if(e.deltaY > 0 && scrollToggle && currentSection != sectionCount){
 			console.log("down");
 			currentSection++;
+			newSlidePosition -= sectionHeight
 			scrollToggle = false;
-			onePageScroll(true);
+			onePageScroll();
 		}
 		else if(e.deltaY < 0 && scrollToggle && currentSection != 1){
 			currentSection--;
+			newSlidePosition += sectionHeight
 			scrollToggle = false;
-			onePageScroll(false);
+			onePageScroll();
 			console.log("up");
 		}
 
 	});
 
-	function onePageScroll(where){
-		if(where){
-			newSlidePosition -= sectionHeight
-		}else{
-			newSlidePosition += sectionHeight
-		}
+	function onePageScroll(){
 		console.log(currentSection);
 		mainWrapper.style.transform="translateY("+ newSlidePosition +"px)";
-		setTimeout(function(){scrollToggle = true;}, 700);
+		// fixedLinksArray[currentSection - 1].classList.add("fixed-list__item_active");
+		setTimeout(function(){scrollToggle = true;}, 800);
+	}
+
+	document.body.addEventListener("click", function(e){
+		var target = e.target
+
+		if(target.getAttribute("data-href")){
+			var href = target.getAttribute("data-href");
+			linkToSection(sectionList[href])
+		}
+	});
+
+	function linkToSection(num){
+		currentSection = num + 1;
+		newSlidePosition = num * sectionHeight * -1;
+		onePageScroll();
 	}
 })();
 
