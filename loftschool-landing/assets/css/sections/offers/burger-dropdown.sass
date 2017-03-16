@@ -3,14 +3,13 @@
 	top: 0%
 	left: 0
 	text-align: center
-	cursor: pointer
 
 	&:hover
 		.burger-dropdown__wrapper
 			background-color: #e45028
 		.burger-dropdown__table
 			left: 100%
-			opacity: 1
+			visibility: visible
 
 	&__wrapper
 		background-color: #EB7C32
@@ -34,8 +33,7 @@
 		border-radius: 5px
 		padding: 15px 15px 0 15px
 		display: block
-		opacity: 0
-		transition: opacity 300ms
+		visibility: hidden
 
 		&::before
 			content: ''
