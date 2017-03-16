@@ -27,6 +27,9 @@
 		&:hover > .fixed-list__link
 			transform: translate(50%, 50%) scale(1)
 
+		&_active > .fixed-list__link
+			transform: translate(50%, 50%) scale(1)
+
 	&__link
 		position: absolute
 		display: inline-block
@@ -38,6 +41,3 @@
 		right: 50%
 		transform: translate(50%, 50%) scale(0)
 		transition: transform 200ms
-
-		&_active
-			transform: translate(50%, 50%) scale(1)
