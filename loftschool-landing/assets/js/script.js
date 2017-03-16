@@ -205,7 +205,6 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		});
 	window.addEventListener("wheel", function(e){
 		if(e.deltaY > 0 && scrollToggle && currentSection != sectionCount){
-			console.log("down");
 			currentSection++;
 			newSlidePosition -= sectionHeight
 			scrollToggle = false;
@@ -216,11 +215,9 @@ function infinitySlide(hiddenTranslate, nextSlide){
 			newSlidePosition += sectionHeight
 			scrollToggle = false;
 			onePageScroll();
-			console.log("up");
 		}
 	});
 	function onePageScroll(){
-		console.log(currentSection);
 		mainWrapper.style.transform="translateY("+ newSlidePosition +"px)";
 		removeFixedListActive();
 		fixedLinksArray[currentSection - 1].classList.add("fixed-list__item_active");
