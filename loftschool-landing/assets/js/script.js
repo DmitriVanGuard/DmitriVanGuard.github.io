@@ -110,10 +110,11 @@ function modalAddListener(elem, name, text){
 var arrowArray = document.querySelectorAll(".arrow-slider"),
 	burgerSlider = document.querySelector(".burger-slider__list"),
 	burgerSliderItems = document.querySelectorAll(".burger-slider__item"),
+	burgerSliderItemWidth = burgerSliderItems[0].clientWidth,
 	slidesCount = burgerSliderItems.length + 1,
 	slideToAmount = 0,
 	currentSlideNumber = 1,
-	lastSlideOffset = -940 * (slidesCount - 1);
+	lastSlideOffset = -1 * burgerSliderItemWidth * (slidesCount - 1);
 
 if(burgerSliderItems){
 	var firstSlideClone = burgerSliderItems[0].cloneNode(true);
@@ -122,7 +123,7 @@ if(burgerSliderItems){
 	burgerSlider.appendChild(firstSlideClone);
 }
 
-burgerSlider.style.width = 940 * slidesCount + "px";
+burgerSlider.style.width = burgerSliderItemWidth * slidesCount + "px";
 
 
 arrowArray.forEach(function(item){
@@ -144,21 +145,21 @@ function sliderDirection(arrow){
 function currentSlide(change){
 	change ? (
 			currentSlideNumber++,
-			slideToAmount -= 940,
+			slideToAmount -= burgerSliderItemWidth,
 			moveSlides(slideToAmount)
 		) : (
 			currentSlideNumber--,
-			slideToAmount += 940,
+			slideToAmount += burgerSliderItemWidth,
 			moveSlides(slideToAmount)
 			);
 }
 
 function moveSlides(amount){
 	if(currentSlideNumber > slidesCount){
-		infinitySlide(0, -940);
+		infinitySlide(0, -1 * burgerSliderItemWidth);
 	}
 	else if(currentSlideNumber === 0){
-		infinitySlide(lastSlideOffset, lastSlideOffset + 940);
+		infinitySlide(lastSlideOffset, lastSlideOffset + burgerSliderItemWidth);
 	}
 	else{
 		setTimeout(function(){burgerSlider.style.transform = "translate3d(" + amount + "px, 0, 0)";}, 40);
@@ -172,7 +173,7 @@ function moveSlides(amount){
 function infinitySlide(hiddenTranslate, nextSlide){
 	burgerSlider.classList.add("burger-slider__list_moving");
 	slideToAmount = nextSlide;
-	currentSlideNumber = Math.abs(nextSlide) / 940 + 1;
+	currentSlideNumber = Math.abs(nextSlide) / burgerSliderItemWidth + 1;
 	burgerSlider.style.transform = "translate3d(" + hiddenTranslate + "px, 0, 0)";
 	setTimeout(function(){
 		burgerSlider.classList.remove("burger-slider__list_moving");
