@@ -245,13 +245,15 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		if(e.deltaY > 0 && scrollToggle && currentSection != sectionCount){
 			currentSection++;
 			newSlidePosition -= sectionHeight;
+			scrollToggle = false;
+			onePageScroll();
 		}
 		else if(e.deltaY < 0 && scrollToggle && currentSection != 1){
 			currentSection--;
 			newSlidePosition += sectionHeight;
-		}
 			scrollToggle = false;
 			onePageScroll();
+		}
 	});
 	function onePageScroll(){
 		mainWrapper.style.transform="translate3d(0, "+ newSlidePosition +"px, 0px)";
@@ -267,7 +269,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 
 		setTimeout(function(){
 			scrollToggle = true;
-		}, 1000);
+		}, 2300);
 	}
 	
 	function linkToSection(num){
