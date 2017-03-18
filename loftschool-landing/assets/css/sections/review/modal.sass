@@ -18,7 +18,6 @@
 		position: relative
 		background-color: #f9f9f9
 		box-sizing: border-box
-		width: 460px
 		padding: 25px 20px
 		border-radius: 10px
 		top: 50%
@@ -26,6 +25,7 @@
 		transform: translate(-50%, -50%)
 		transition: opacity 400ms
 		box-shadow: 0 0 30px rgba(0, 0, 0, .8)
+		display: inline-block
 
 	&__title
 		color: #444444
@@ -35,6 +35,12 @@
 
 	&__text
 		font-size: 13px
+		color: black
+		max-width: 420px
+		min-width: 200px
+
+		&_order
+			text-align: center
 
 	&__exit
 		position: absolute

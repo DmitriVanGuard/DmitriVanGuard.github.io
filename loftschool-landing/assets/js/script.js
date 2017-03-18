@@ -59,9 +59,9 @@ teamTrigger.forEach(function(item){
 
 //Modal box
 var reviewButton = document.querySelectorAll(".review-section__button"),
-	modalBox = document.querySelector(".modal"),
-	modalContent =  modalBox.firstElementChild,
-	modalExit = modalContent.firstElementChild 	;
+	orderButton = document.querySelector(".order-section__order-button"),
+	modalBoxes = document.querySelectorAll(".modal");
+	
 
 reviewButton.forEach(function(item){
 	item.addEventListener("click", function(){
@@ -70,10 +70,12 @@ reviewButton.forEach(function(item){
 			reviewName = reviewText.previousElementSibling,
 			reviewTextCopy = reviewText.cloneNode(true),
 			reviewNameCopy = reviewName.cloneNode(true),
-			fragment = document.createDocumentFragment();
+			fragment = document.createDocumentFragment(),
+			modalBox = modalBoxes[0],
+			modalContent =  modalBox.firstElementChild,
+			modalExit = modalContent.firstElementChild;
 
-		modalBox.classList.toggle("modal_active");
-
+		modalBox.classList.add("modal_active");
 		scrollToggle = false;
 
 		fragment.appendChild(reviewNameCopy);
@@ -82,28 +84,55 @@ reviewButton.forEach(function(item){
 		fragment.lastElementChild.classList.add("modal__text");
 		modalContent.appendChild(fragment);
 
-		modalAddListener(modalExit, reviewNameCopy, reviewTextCopy);
-		modalAddListener(modalBox, reviewNameCopy, reviewTextCopy);
-
-		modalContent.addEventListener("click", function(e){
-			e.stopPropagation();
-		});
-
+		modalAddListener(modalExit, modalContent, modalBox, reviewNameCopy, reviewTextCopy);
+		modalAddListener(modalBox, modalContent, modalBox, reviewNameCopy, reviewTextCopy);
 	});
 });
 
+orderButton.addEventListener("click", function(e){
 
-function modalAddListener(elem, name, text){
+	e.preventDefault();
+
+	var button = this,
+		fragment = document.createDocumentFragment(),
+		orderComplete = document.createElement("h4"),
+		orderCompleteText = document.createTextNode("Заказ оформлен"),
+		modalBox = modalBoxes[1],
+		modalContent =  modalBox.firstElementChild,
+		modalExit = modalContent.firstElementChild;
+
+	modalBox.classList.add("modal_active");
+	scrollToggle = false;
+
+	orderComplete.appendChild(orderCompleteText);
+	fragment.appendChild(orderComplete);
+	fragment.firstElementChild.classList.add("modal__text");
+	fragment.firstElementChild.classList.add("modal__text_order");
+	modalContent.appendChild(fragment);
+
+	modalAddListener(modalExit, modalContent, modalBox, orderComplete);
+	modalAddListener(modalBox, modalContent, modalBox, orderComplete);
+});
+
+function modalAddListener(elem, content, box, name, text){
 	elem.onclick = function(e){
-			e.preventDefault();
-			setTimeout(function(){
-				modalContent.removeChild(name);
-				modalContent.removeChild(text);
-			}, 400);
-			modalBox.classList.remove("modal_active");
-			scrollToggle = true;
-		};
+		e.preventDefault();
+		setTimeout(function(){
+			content.removeChild(name);
+			if(text){
+				content.removeChild(text);
+			}
+		}, 400);
+		box.classList.remove("modal_active");
+		scrollToggle = true;
+	};
+
+	content.addEventListener("click", function(e){
+			e.stopPropagation();
+	});
 }
+
+
 
 //Slider
 
@@ -181,6 +210,8 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	}, 40);
 
 }
+
+
 
 //One Page scroll
 	document.body.style.overflowY="hidden";
