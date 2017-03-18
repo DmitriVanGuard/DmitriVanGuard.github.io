@@ -90,9 +90,6 @@ reviewButton.forEach(function(item){
 });
 
 orderButton.addEventListener("click", function(e){
-
-	e.preventDefault();
-
 	var button = this,
 		fragment = document.createDocumentFragment(),
 		orderComplete = document.createElement("h4"),
@@ -228,7 +225,6 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	window.addEventListener("resize", function(){
 		if(window.innerHeight > 650){
 			sectionHeight = window.innerHeight;
-			console.log(sectionHeight);
 		}else{
 			sectionHeight = 650
 		}
@@ -258,7 +254,6 @@ function infinitySlide(hiddenTranslate, nextSlide){
 			onePageScroll();
 	});
 	function onePageScroll(){
-		console.log(currentSection);
 		mainWrapper.style.transform="translate3d(0, "+ newSlidePosition +"px, 0px)";
 		removeFixedListActive();
 		fixedLinksArray[currentSection - 1].classList.add("fixed-list__item_active");
