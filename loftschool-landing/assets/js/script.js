@@ -218,9 +218,15 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		mainWrapper.style.transform="translate3d(0, "+ newSlidePosition +"px, 0px)";
 		removeFixedListActive();
 		fixedLinksArray[currentSection - 1].classList.add("fixed-list__item_active");
+		if(currentSection === 8 || currentSection === 2){
+			fixedLinksArray.forEach(function(item){
+				item.classList.add("fixed-list__item_black");
+			});
+			fixedLinksArray[currentSection - 1].firstElementChild.classList.add("fixed-list__link_black")
+		}
 		setTimeout(function(){
 			scrollToggle = true;
-		}, 800);
+		}, 1000);
 	}
 	
 	function linkToSection(num){
@@ -231,6 +237,8 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	function removeFixedListActive(){
 		fixedLinksArray.forEach(function(item){
 			item.classList.remove("fixed-list__item_active");
+			item.classList.remove("fixed-list__item_black");
+			item.firstElementChild.classList.remove("fixed-list__link_black");
 		});
 	}
 })();

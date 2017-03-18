@@ -12,7 +12,15 @@
 		border-radius: 50%
 		position: relative
 		cursor: pointer
+		transition: background-color 300ms
 
+		&_black
+			background-color: black
+
+			&:hover > .fixed-list__link
+				transform: translate(50%, 50%) scale(1)
+				border: 1px solid black
+				
 		&::before
 			content: ''
 			display: inline-block
@@ -40,4 +48,7 @@
 		bottom: 50%
 		right: 50%
 		transform: translate(50%, 50%) scale(0)
-		transition: transform 200ms
+		transition: transform 300ms
+			
+		&_black
+			border: 1px solid black

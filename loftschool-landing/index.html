@@ -6,6 +6,12 @@
 		<!-- <script src="assets/js/onepagescroll.js"></script> -->
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script src="https://api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
+		<style>
+			::-webkit-scrollbar {
+			      width: 15px;
+			} /* this targets the default scrollbar (compulsory) */	
+		</style>
 	</head>
 	<body>
 			<ul class="fixed-list">
@@ -16,7 +22,7 @@
 				<li class="fixed-list__item"><a href="#" data-href="menu" class="fixed-list__link"></a></li>
 				<li class="fixed-list__item"><a href="#" data-href="review" class="fixed-list__link"></a></li>
 				<li class="fixed-list__item"><a href="#" data-href="order" class="fixed-list__link"></a></li>
-				<li class="fixed-list__item"><a href="#" data-href="map" class="fixed-list__link"></a></li>
+				<li class="fixed-list__item"><a href="#" data-href="yandexMap" class="fixed-list__link"></a></li>
 			</ul>
 		<div class="main">
 			<section id="welcome" class="section welcome-section">
@@ -35,7 +41,7 @@
 								<li class="nav__item"><a href="#" data-href="team" class="nav__link">Команда</a></li>
 								<li class="nav__item"><a href="#" data-href="menu" class="nav__link">Меню</a></li>
 								<li class="nav__item"><a href="#" data-href="review" class="nav__link">Отзывы</a></li>
-								<li class="nav__item"><a href="#" data-href="map" class="nav__link">Контакты</a></li>
+								<li class="nav__item"><a href="#" data-href="yandexMap" class="nav__link">Контакты</a></li>
 							</ul>
 							<button class="btn-order" data-href="order">Заказать</button>
 						</div>
@@ -607,7 +613,8 @@
 					</div>
 				</div>
 			</section>
-			<section id="map" class="section map-section">
+			<section id="yandexMap" class="section map-section">
+				<div id="map" style="width: 100%; height: calc(100% - 60px);"></div>
 				<footer class="footer">
 					<div class="container">
 						<div class="footer__left">
@@ -638,7 +645,7 @@
 				menu: 4,
 				review: 5,
 				order: 6,
-				map: 7
+				yandexMap: 7
 			};
 		</script>
 
@@ -653,5 +660,22 @@
 			   $("#phone").mask("+7 (999) 999 99 99");
 			});
 		</script>
+		<script type="text/javascript">
+		    var map = new ymaps.Map("map", {
+		            center: [55.76, 37.64], 
+		            zoom: 7
+		        });
+		</script>
+		<script type="text/javascript">
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){     
+        myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 7
+        });
+    }
+</script>
 	</body>
 </html>
