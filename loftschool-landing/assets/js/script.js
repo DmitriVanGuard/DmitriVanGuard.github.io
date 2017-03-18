@@ -76,7 +76,7 @@ reviewButton.forEach(function(item){
 			modalExit = modalContent.firstElementChild;
 
 		modalBox.classList.add("modal_active");
-		scrollToggle = false;
+		scrollEnabled = false;
 
 		fragment.appendChild(reviewNameCopy);
 		fragment.appendChild(reviewTextCopy);
@@ -99,7 +99,7 @@ orderButton.addEventListener("click", function(e){
 		modalExit = modalContent.firstElementChild;
 
 	modalBox.classList.add("modal_active");
-	scrollToggle = false;
+	scrollEnabled = false;
 
 	orderComplete.appendChild(orderCompleteText);
 	fragment.appendChild(orderComplete);
@@ -121,7 +121,7 @@ function modalAddListener(elem, content, box, name, text){
 			}
 		}, 400);
 		box.classList.remove("modal_active");
-		scrollToggle = true;
+		scrollEnabled = true;
 	};
 
 	content.addEventListener("click", function(e){
@@ -140,7 +140,7 @@ var arrowArray = document.querySelectorAll(".arrow-slider"),
 	slidesCount = burgerSliderItems.length + 1,
 	slideToAmount = 0,
 	currentSlideNumber = 1,
-	lastSlideOffset = -1 * burgerSliderItemWidth * (slidesCount - 1);
+	lastSlidePosition = -1 * burgerSliderItemWidth * (slidesCount - 1);
 
 if(burgerSliderItems){
 	var firstSlideClone = burgerSliderItems[0].cloneNode(true);
@@ -149,14 +149,14 @@ if(burgerSliderItems){
 	burgerSlider.appendChild(firstSlideClone);
 }
 
-burgerSlider.style.width = burgerSliderItemWidth * slidesCount + "px";
+burgerSlider.style.width = burgerSliderItemWidth * slidesCount + "px"; //Set List width that contains all slides 
 
 
 arrowArray.forEach(function(item){
-	sliderDirection(item);
+	sliderDirection(item); //Set arriw's direction
 });
 
-function sliderDirection(arrow){
+function sliderDirection(arrow){  //Set arriw's direction
 	if(arrow.classList.contains('arrow-slider__right')){
 		arrow.addEventListener("click", function(){
 			currentSlide(true);
@@ -171,11 +171,11 @@ function sliderDirection(arrow){
 function currentSlide(change){
 	change ? (
 			currentSlideNumber++,
-			slideToAmount -= burgerSliderItemWidth,
+			slideToAmount -= burgerSliderItemWidth, //Amount to scroll in order to show next slide
 			moveSlides(slideToAmount)
 		) : (
 			currentSlideNumber--,
-			slideToAmount += burgerSliderItemWidth,
+			slideToAmount += burgerSliderItemWidth, //Amount to scroll in order to show next slide
 			moveSlides(slideToAmount)
 			);
 }
@@ -185,7 +185,7 @@ function moveSlides(amount){
 		infinitySlide(0, -1 * burgerSliderItemWidth);
 	}
 	else if(currentSlideNumber === 0){
-		infinitySlide(lastSlideOffset, lastSlideOffset + burgerSliderItemWidth);
+		infinitySlide(lastSlidePosition, lastSlidePosition + burgerSliderItemWidth);
 	}
 	else{
 		setTimeout(function(){burgerSlider.style.transform = "translate3d(" + amount + "px, 0, 0)";}, 40);
@@ -193,17 +193,18 @@ function moveSlides(amount){
 	burgerSliderItems.forEach(function(item){
 		item.classList.remove("burger-slider__item_active");
 	});
+
 	burgerSliderItems[currentSlideNumber - 1].classList.add("burger-slider__item_active");
 }
 
 function infinitySlide(hiddenTranslate, nextSlide){
-	burgerSlider.classList.add("burger-slider__list_moving");
-	slideToAmount = nextSlide;
-	currentSlideNumber = Math.abs(nextSlide) / burgerSliderItemWidth + 1;
-	burgerSlider.style.transform = "translate3d(" + hiddenTranslate + "px, 0, 0)";
+	burgerSlider.classList.add("burger-slider__list_moving"); // This class disable transition for transform
+	slideToAmount = nextSlide; //Amount to scroll in order to show next slide
+	currentSlideNumber = Math.abs(nextSlide) / burgerSliderItemWidth + 1; //Calculate slide number that will be shown after hidden animation
+	burgerSlider.style.transform = "translate3d(" + hiddenTranslate + "px, 0, 0)"; // Without animation change slide to first or last(last is clone of first);
 	setTimeout(function(){
 		burgerSlider.classList.remove("burger-slider__list_moving");
-		burgerSlider.style.transform = "translate3d( " + nextSlide + "px, 0, 0)";
+		burgerSlider.style.transform = "translate3d( " + nextSlide + "px, 0, 0)"; // Activate animation and slide to the second slide or one before last
 	}, 40);
 
 }
@@ -219,7 +220,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	sectionCount = sectionArray.length,
 	currentSection = 1,
 	newSlidePosition = 0,
-	scrollToggle = true,
+	scrollEnabled = true,
 	fixedLinksArray = document.querySelectorAll(".fixed-list__item");
 
 	window.addEventListener("resize", function(){
@@ -233,7 +234,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		onePageScroll(false);
 	});
 
-	document.body.addEventListener("click", function(e){
+	document.body.addEventListener("click", function(e){ //Scroll to chosen section
 			var target = e.target;
 
 			if(target.getAttribute("data-href")){
@@ -242,35 +243,35 @@ function infinitySlide(hiddenTranslate, nextSlide){
 			}
 		});
 	window.addEventListener("wheel", function(e){
-		if(e.deltaY > 0 && scrollToggle && currentSection != sectionCount){
+		if(e.deltaY > 0 && scrollEnabled && currentSection != sectionCount){
 			currentSection++;
 			newSlidePosition -= sectionHeight;
-			scrollToggle = false;
+			scrollEnabled = false;
 			onePageScroll(true);
 		}
-		else if(e.deltaY < 0 && scrollToggle && currentSection != 1){
+		else if(e.deltaY < 0 && scrollEnabled && currentSection != 1){
 			currentSection--;
 			newSlidePosition += sectionHeight;
-			scrollToggle = false;
+			scrollEnabled = false;
 			onePageScroll(true);
 		}
 
 	});
 	function onePageScroll(trigger){
 		mainWrapper.style.transform="translate3d(0, "+ newSlidePosition +"px, 0px)";
-		removeFixedListActive();
+		removeFixedListActive();   //Remove active circle from fixed nav list
 		fixedLinksArray[currentSection - 1].classList.add("fixed-list__item_active");
 
-		if(currentSection === 8 || currentSection === 2){
+		if(currentSection === 8 || currentSection === 2){  //Change fixed nav list color to black
 			fixedLinksArray.forEach(function(item){
 				item.classList.add("fixed-list__item_black");
 			});
 			fixedLinksArray[currentSection - 1].firstElementChild.classList.add("fixed-list__link_black")
 		}
 
-		if(!trigger) return;
+		if(!trigger) return;  //To trigger timer when it needed
 		setTimeout(function(){
-			scrollToggle = true;
+			scrollEnabled = true;
 		}, 2300);
 	}
 	
