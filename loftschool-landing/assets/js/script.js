@@ -179,6 +179,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		burgerSlider.classList.remove("burger-slider__list_moving");
 		burgerSlider.style.transform = "translate3d( " + nextSlide + "px, 0, 0)";
 	}, 40);
+
 }
 
 //One Page scroll
@@ -193,6 +194,18 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	scrollToggle = true,
 	fixedLinksArray = document.querySelectorAll(".fixed-list__item");
 
+	window.addEventListener("resize", function(){
+		if(window.innerHeight > 650){
+			sectionHeight = window.innerHeight;
+			console.log(sectionHeight);
+		}else{
+			sectionHeight = 650
+		}
+		var sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
+		newSlidePosition = sectionTopOffset * -1;
+		onePageScroll();
+	});
+
 	document.body.addEventListener("click", function(e){
 			var target = e.target;
 
@@ -205,26 +218,27 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		if(e.deltaY > 0 && scrollToggle && currentSection != sectionCount){
 			currentSection++;
 			newSlidePosition -= sectionHeight;
-			scrollToggle = false;
-			onePageScroll();
 		}
 		else if(e.deltaY < 0 && scrollToggle && currentSection != 1){
 			currentSection--;
 			newSlidePosition += sectionHeight;
+		}
 			scrollToggle = false;
 			onePageScroll();
-		}
 	});
 	function onePageScroll(){
+		console.log(currentSection);
 		mainWrapper.style.transform="translate3d(0, "+ newSlidePosition +"px, 0px)";
 		removeFixedListActive();
 		fixedLinksArray[currentSection - 1].classList.add("fixed-list__item_active");
+
 		if(currentSection === 8 || currentSection === 2){
 			fixedLinksArray.forEach(function(item){
 				item.classList.add("fixed-list__item_black");
 			});
 			fixedLinksArray[currentSection - 1].firstElementChild.classList.add("fixed-list__link_black")
 		}
+
 		setTimeout(function(){
 			scrollToggle = true;
 		}, 1000);
