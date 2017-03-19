@@ -221,7 +221,10 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	currentSection = 1,
 	newSlidePosition = 0,
 	scrollEnabled = true,
-	fixedLinksArray = document.querySelectorAll(".fixed-list__item");
+	fixedLinksArray = document.querySelectorAll(".fixed-list__item"),
+	startY,  // For mobiles
+	endY,
+	yDelta;
 
 	window.addEventListener("resize", function(){
 		if(window.innerHeight > 650){
@@ -244,19 +247,45 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		});
 	window.addEventListener("wheel", function(e){
 		if(e.deltaY > 0 && scrollEnabled && currentSection != sectionCount){
-			currentSection++;
-			newSlidePosition -= sectionHeight;
-			scrollEnabled = false;
-			onePageScroll(true);
+			whereToScroll("scrollDown");
 		}
 		else if(e.deltaY < 0 && scrollEnabled && currentSection != 1){
-			currentSection--;
-			newSlidePosition += sectionHeight;
-			scrollEnabled = false;
-			onePageScroll(true);
+			whereToScroll("scrollUp");
 		}
 
 	});
+
+	//For mobiles
+	window.addEventListener("touchstart", function(e){
+	    startY = e.touches[0].pageY;
+	});
+	window.addEventListener("touchmove", function(e){
+	    endY = e.touches[0].pageY;
+	});
+	window.addEventListener("touchend", function(e){
+		yDelta = endY - startY;
+	    if(yDelta <= -50 && scrollEnabled && currentSection != sectionCount && endY != 0 ){
+	    	whereToScroll("scrollDown");
+	    }
+	    if(yDelta >= 50 && scrollEnabled && currentSection != 1 && endY != 0 ){
+	    	whereToScroll("scrollUp");
+	    }
+	});
+
+	function whereToScroll(direction){
+		if(direction === "scrollDown"){
+			currentSection++;
+			newSlidePosition -= sectionHeight;
+		}
+		else if(direction === "scrollUp"){
+			currentSection--;
+			newSlidePosition += sectionHeight;
+		}
+			endY = 0; // In order to disable scroll when user just click on a page
+			scrollEnabled = false;
+			onePageScroll(true);
+	}
+
 	function onePageScroll(trigger){
 		mainWrapper.style.transform="translate3d(0, "+ newSlidePosition +"px, 0px)";
 		removeFixedListActive();   //Remove active circle from fixed nav list
