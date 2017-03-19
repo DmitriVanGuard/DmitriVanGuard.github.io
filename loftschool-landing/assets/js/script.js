@@ -213,7 +213,6 @@ function infinitySlide(hiddenTranslate, nextSlide){
 
 //One Page scroll
 	document.body.style.overflowY="hidden";
-	document.body.style.position="relative";
 
 	var mainWrapper = document.querySelector(".main"),
 	sectionArray = document.querySelectorAll("section"),
@@ -224,7 +223,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	scrollEnabled = true,
 	fixedLinksArray = document.querySelectorAll(".fixed-list__item"),
 	startY,  // For mobiles
-	endY,
+	endY = 0,
 	yDelta;
 
 	window.addEventListener("resize", function(){
@@ -259,23 +258,21 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	//For mobiles
 	window.addEventListener("touchstart", function(e){
 	    startY = e.touches[0].pageY;
-	}, true);
+	});
 	window.addEventListener("touchmove", function(e){
+		if(e.touches.length > 1) return;
+		e.preventDefault();
 	    endY = e.touches[0].pageY;
-	}, true);
+	});
 	window.addEventListener("touchend", function(e){
 		yDelta = endY - startY;
 	    if(yDelta <= -50 && scrollEnabled && currentSection != sectionCount && endY != 0 ){
 	    	whereToScroll("scrollDown");
 	    }
-	    if(yDelta >= 50 && scrollEnabled && currentSection != 1 && endY != 0 ){
+	    else if(yDelta >= 50 && scrollEnabled && currentSection != 1 && endY != 0 ){
 	    	whereToScroll("scrollUp");
 	    }
-	}, true);
-
-	// window.addEventListener("touchmove", function(e){
-	//     e.preventDefault();
-	// });
+	});
 
 	function whereToScroll(direction){
 		if(direction === "scrollDown"){
