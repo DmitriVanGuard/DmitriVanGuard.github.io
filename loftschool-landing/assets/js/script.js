@@ -272,7 +272,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		if(!trigger) return;  //To trigger timer when it needed
 		setTimeout(function(){
 			scrollEnabled = true;
-		}, 2300);
+		}, 1700);
 	}
 	
 	function linkToSection(num){
