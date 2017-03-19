@@ -258,10 +258,10 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	//For mobiles
 	window.addEventListener("touchstart", function(e){
 	    startY = e.touches[0].pageY;
-	});
+	}, true);
 	window.addEventListener("touchmove", function(e){
 	    endY = e.touches[0].pageY;
-	});
+	}, true);
 	window.addEventListener("touchend", function(e){
 		yDelta = endY - startY;
 	    if(yDelta <= -50 && scrollEnabled && currentSection != sectionCount && endY != 0 ){
@@ -270,6 +270,10 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	    if(yDelta >= 50 && scrollEnabled && currentSection != 1 && endY != 0 ){
 	    	whereToScroll("scrollUp");
 	    }
+	}, true);
+
+	window.addEventListener("touchmove", function(e){
+	    e.preventDefault();
 	});
 
 	function whereToScroll(direction){
