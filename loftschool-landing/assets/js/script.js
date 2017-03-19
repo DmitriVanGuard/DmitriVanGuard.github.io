@@ -213,6 +213,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 
 //One Page scroll
 	document.body.style.overflowY="hidden";
+	document.body.style.position="relative";
 
 	var mainWrapper = document.querySelector(".main"),
 	sectionArray = document.querySelectorAll("section"),
@@ -272,9 +273,9 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	    }
 	}, true);
 
-	window.addEventListener("touchmove", function(e){
-	    e.preventDefault();
-	});
+	// window.addEventListener("touchmove", function(e){
+	//     e.preventDefault();
+	// });
 
 	function whereToScroll(direction){
 		if(direction === "scrollDown"){
