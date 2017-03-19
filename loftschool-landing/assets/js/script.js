@@ -260,7 +260,6 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	    startY = e.touches[0].pageY;
 	});
 	window.addEventListener("touchmove", function(e){
-		if(e.touches.length > 1) return;
 		e.preventDefault();
 	    endY = e.touches[0].pageY;
 	});
