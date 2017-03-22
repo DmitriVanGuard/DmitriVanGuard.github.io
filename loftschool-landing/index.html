@@ -568,7 +568,7 @@
 				<div class="container">
 					<div class="order-section__content-block">
 						<h1 class="title order-section__title">Закажите доставку</h1>
-						<form action="" method="get" class="order-section__form">
+						<form action="assets/php/form.php" method="post" class="order-section__form">
 							<div class="order-section__left">
 								<label class="order-section__label order-section__label_name">Имя <br/>
 									<input class="order-section__input" placeholder="Иван" name="name" type="text">
@@ -665,22 +665,50 @@
 			   $("#phone").mask("+7 (999) 999 99 99");
 			});
 		</script>
-		<script type="text/javascript">
-		    var map = new ymaps.Map("map", {
-		            center: [55.76, 37.64], 
-		            zoom: 7
-		        });
-		</script>
-		<script type="text/javascript">
-    ymaps.ready(init);
-    var myMap;
+		 <script type="text/javascript">
+	        ymaps.ready(init);
+	        var myMap;
 
-    function init(){     
-        myMap = new ymaps.Map("map", {
-            center: [55.76, 37.64],
-            zoom: 7
-        });
-    }
-</script>
+	        function init(){ 
+	            myMap = new ymaps.Map("map", {
+	                center: [55.755, 37.63],
+	                zoom: 13,
+	                controls: []
+	            }); 
+	            
+	            var myPlacemark = new ymaps.Placemark([55.75, 37.64], {}, {
+			        iconLayout: 'default#image',
+			        iconImageHref: 'img/icons/map-marker.svg',
+			        iconImageSize: [46, 57],
+			        iconImageOffset: [-26, -52]
+			    });
+
+			    var myPlacemark2 = new ymaps.Placemark([55.744, 37.63], {}, {
+			        iconLayout: 'default#image',
+			        iconImageHref: 'img/icons/map-marker.svg',
+			        iconImageSize: [46, 57],
+			        iconImageOffset: [-26, -52]
+			    });
+			    var myPlacemark3 = new ymaps.Placemark([55.77, 37.59], {}, {
+			        iconLayout: 'default#image',
+			        iconImageHref: 'img/icons/map-marker.svg',
+			        iconImageSize: [46, 57],
+			        iconImageOffset: [-26, -52]
+			    });
+			    var myPlacemark4 = new ymaps.Placemark([55.77, 37.6333], {}, {
+			        iconLayout: 'default#image',
+			        iconImageHref: 'img/icons/map-marker.svg',
+			        iconImageSize: [46, 57],
+			        iconImageOffset: [-26, -52]
+			    });
+
+	            myMap.geoObjects.add(myPlacemark);
+	            myMap.geoObjects.add(myPlacemark2);
+	            myMap.geoObjects.add(myPlacemark3);
+	            myMap.geoObjects.add(myPlacemark4);
+
+	            myMap.behaviors.disable('scrollZoom');
+	        }
+	    </script>
 	</body>
 </html>
