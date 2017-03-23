@@ -256,7 +256,8 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	fixedLinksArray = document.querySelectorAll(".fixed-list__item"),
 	startY,  // For mobiles
 	endY = 0,
-	yDelta;
+	yDelta,
+	sectionTopOffset;
 
 	window.addEventListener("resize", function(){
 		if(window.innerHeight > 650){
@@ -264,7 +265,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		}else{
 			sectionHeight = 650
 		}
-		var sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
+		sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
 		newSlidePosition = sectionTopOffset * -1;
 		onePageScroll(false);
 	});
@@ -308,11 +309,15 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	function whereToScroll(direction){
 		if(direction === "scrollDown"){
 			currentSection++;
-			newSlidePosition -= sectionHeight;
+			// newSlidePosition -= sectionHeight;
+			sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
+			newSlidePosition = sectionTopOffset * -1;
 		}
 		else if(direction === "scrollUp"){
 			currentSection--;
-			newSlidePosition += sectionHeight;
+			// newSlidePosition += sectionHeight;
+			sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
+			newSlidePosition = sectionTopOffset * -1;
 		}
 			endY = 0; // In order to disable scroll when user just click on a page
 			scrollEnabled = false;
