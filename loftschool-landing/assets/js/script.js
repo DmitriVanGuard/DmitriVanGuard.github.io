@@ -89,26 +89,36 @@ reviewButton.forEach(function(item){
 	});
 });
 
+var formComplete;
+
 orderButton.addEventListener("click", function(e){
 	var button = this,
 		fragment = document.createDocumentFragment(),
 		orderComplete = document.createElement("h4"),
-		orderCompleteText = document.createTextNode("Заказ оформлен"),
 		modalBox = modalBoxes[1],
 		modalContent =  modalBox.firstElementChild,
 		modalExit = modalContent.firstElementChild;
 
-	modalBox.classList.add("modal_active");
-	scrollEnabled = false;
+	setTimeout(function(){
+		var orderCompleteText = formComplete ? document.createTextNode("Заказ оформлен") : document.createTextNode("Произошла ошибка");
+	
+		modalBox.classList.add("modal_active");
+		scrollEnabled = false;
 
-	orderComplete.appendChild(orderCompleteText);
-	fragment.appendChild(orderComplete);
-	fragment.firstElementChild.classList.add("modal__text");
-	fragment.firstElementChild.classList.add("modal__text_order");
-	modalContent.appendChild(fragment);
+		orderComplete.appendChild(orderCompleteText);
+		fragment.appendChild(orderComplete);
+		fragment.firstElementChild.classList.add("modal__text");
+		fragment.firstElementChild.classList.add("modal__text_order");
 
-	modalAddListener(modalExit, modalContent, modalBox, orderComplete);
-	modalAddListener(modalBox, modalContent, modalBox, orderComplete);
+		modalContent.appendChild(fragment);
+
+		if(!formComplete)
+			modalContent.lastElementChild.style.color="red";
+
+		modalAddListener(modalExit, modalContent, modalBox, orderComplete);
+		modalAddListener(modalBox, modalContent, modalBox, orderComplete);
+	}, 500);
+	
 });
 
 function modalAddListener(elem, content, box, name, text){
@@ -122,12 +132,34 @@ function modalAddListener(elem, content, box, name, text){
 		}, 400);
 		box.classList.remove("modal_active");
 		scrollEnabled = true;
+
+		elem.onclick = null;
 	};
 
 	content.addEventListener("click", function(e){
 			e.stopPropagation();
 	});
 }
+
+
+
+$('#order-form').on('submit', function(e){
+	e.preventDefault();
+
+		var $form = $(this),
+		$formData = $form.serialize();
+
+		$.ajax({
+			url: 'assets/php/form.php', //Адресс куда пойдет запрос. Обрабатываем в form.php
+			type: "POST",
+			data: $formData,
+			success: function(data){ // В первый аргумент попадет ответ СЕРВЕРА
+				data = JSON.parse(data);
+				data.status ? formComplete = true : formComplete = false;
+			}
+		});
+});
+
 
 
 
