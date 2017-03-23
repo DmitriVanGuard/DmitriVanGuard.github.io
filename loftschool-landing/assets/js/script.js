@@ -248,7 +248,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 
 	var mainWrapper = document.querySelector(".main"),
 	sectionArray = document.querySelectorAll("section"),
-	sectionHeight = window.innerHeight,
+	sectionHeight = window.innerHeight > 650 ? window.innerHeight : 650,
 	sectionCount = sectionArray.length,
 	currentSection = 1,
 	newSlidePosition = 0,
