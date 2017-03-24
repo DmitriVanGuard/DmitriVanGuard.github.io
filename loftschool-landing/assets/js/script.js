@@ -244,7 +244,8 @@ function infinitySlide(hiddenTranslate, nextSlide){
 
 
 //One Page scroll
-	document.body.style.overflowY="hidden";
+	document.getElementsByClassName("wrapper")[0].style.overflowY="hidden";
+	document.body.style.position="fixed";
 
 	var mainWrapper = document.querySelector(".main"),
 	sectionArray = document.querySelectorAll("section"),
