@@ -248,7 +248,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 
 	var mainWrapper = document.querySelector(".main"),
 	sectionArray = document.querySelectorAll("section"),
-	sectionHeight = window.innerHeight > 650 ? window.innerHeight : 650,
+	sectionHeight = sectionArray[1].clientHeight,
 	sectionCount = sectionArray.length,
 	currentSection = 1,
 	newSlidePosition = 0,
@@ -310,14 +310,12 @@ function infinitySlide(hiddenTranslate, nextSlide){
 		if(direction === "scrollDown"){
 			currentSection++;
 			// newSlidePosition -= sectionHeight;
-			sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
-			newSlidePosition = sectionTopOffset * -1;
+			newSlidePosition = (currentSection - 1) * sectionHeight * -1;
 		}
 		else if(direction === "scrollUp"){
 			currentSection--;
 			// newSlidePosition += sectionHeight;
-			sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
-			newSlidePosition = sectionTopOffset * -1;
+			newSlidePosition = (currentSection - 1) * sectionHeight * -1;
 		}
 			endY = 0; // In order to disable scroll when user just click on a page
 			scrollEnabled = false;
