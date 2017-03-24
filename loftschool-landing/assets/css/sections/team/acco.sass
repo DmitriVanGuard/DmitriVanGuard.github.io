@@ -29,11 +29,13 @@
 	&__triangle
 		display: inline-block
 		font-size: 18px
-		transform-origin: 9px 17px
+		width: 0
+		height: 0
 		transition: transform 300ms
 		transform: rotateX(0deg)
-		color: #f9b43b
-
+		border-left: 8px solid transparent
+		border-right: 8px solid transparent
+		border-bottom: 8px solid #f9b43b
 
 	&__trigger
 		&_active
