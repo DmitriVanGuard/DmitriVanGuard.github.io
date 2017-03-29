@@ -258,6 +258,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	startY,  // For mobiles
 	endY = 0,
 	yDelta,
+	mobileWidth = window.innerWidth,
 	sectionTopOffset;
 
 	window.addEventListener("resize", function(){
@@ -294,7 +295,7 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	    startY = e.touches[0].pageY;
 	});
 	window.addEventListener("touchmove", function(e){
-		e.preventDefault();
+	    if(zoomed()) return;
 	    endY = e.touches[0].pageY;
 	});
 	window.addEventListener("touchend", function(e){
@@ -307,15 +308,17 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	    }
 	});
 
+	function zoomed(){
+		return mobileWidth === window.innerWidth ? false : true;
+	}
+
 	function whereToScroll(direction){
 		if(direction === "scrollDown"){
 			currentSection++;
-			// newSlidePosition -= sectionHeight;
 			newSlidePosition = (currentSection - 1) * sectionHeight * -1;
 		}
 		else if(direction === "scrollUp"){
 			currentSection--;
-			// newSlidePosition += sectionHeight;
 			newSlidePosition = (currentSection - 1) * sectionHeight * -1;
 		}
 			endY = 0; // In order to disable scroll when user just click on a page
