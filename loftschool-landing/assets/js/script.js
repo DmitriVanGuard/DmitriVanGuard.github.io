@@ -261,17 +261,6 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	mobileWidth = window.innerWidth,
 	sectionTopOffset;
 
-	window.addEventListener("resize", function(){
-		if(window.innerHeight > 650){
-			sectionHeight = window.innerHeight;
-		}else{
-			sectionHeight = 650
-		}
-		sectionTopOffset = sectionArray[currentSection - 1].offsetTop;
-		newSlidePosition = sectionTopOffset * -1;
-		onePageScroll(false);
-	});
-
 	document.body.addEventListener("click", function(e){ //Scroll to chosen section
 			var target = e.target;
 
@@ -296,14 +285,14 @@ function infinitySlide(hiddenTranslate, nextSlide){
 	});
 	window.addEventListener("touchmove", function(e){
 	    if(zoomed()) return;
-	    endY = e.touches[0].pageY;
+		    endY = e.touches[0].pageY;
 	});
 	window.addEventListener("touchend", function(e){
 		yDelta = endY - startY;
-	    if(yDelta <= -50 && scrollEnabled && currentSection != sectionCount && endY != 0 ){
+	    if(yDelta <= -50 && scrollEnabled && !zoomed() && currentSection != sectionCount && endY != 0 ){
 	    	whereToScroll("scrollDown");
 	    }
-	    else if(yDelta >= 50 && scrollEnabled && currentSection != 1 && endY != 0 ){
+	    else if(yDelta >= 50 && scrollEnabled && !zoomed() && currentSection != 1 && endY != 0 ){
 	    	whereToScroll("scrollUp");
 	    }
 	});
