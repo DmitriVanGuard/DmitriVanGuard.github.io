@@ -50,10 +50,10 @@ input {
 	color: #2980b9;
 	background-color: #f7f7f7;
 	width: 100%;
-	padding: 13px 13px 13px 20px;
+	padding: 6.5px 13px 6.5px 20px;
 	box-sizing: border-box;
 	border: 3px solid transparent;
-	transition: height 500ms, padding 500ms;
+	position: relative;
 }
 
 input:focus{

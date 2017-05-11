@@ -24,12 +24,14 @@ $("input[type='text']").keypress(function(event){
 var active = true;
 $(".fa-plus").click(function(){
 	if(active){
-		$("ul").css('top', 'calc(100% - 53px)');
-		$("input").css('visibilit', 'hidden');
+		$("ul").css('top', 'calc(100% - 40px)');
+		setTimeout(function(){
+			$("input").css('z-index', '-3');
+		}, 501);
 		active = false;
 	}else{
 		$("ul").css('top', '100%');
-		$("input").css('visibilit', 'normal');
+		$("input").css('z-index', '0');
 		active = true;
 	}
 });
