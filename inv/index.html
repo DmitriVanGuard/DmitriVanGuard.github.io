@@ -65,6 +65,7 @@ html, body {
 		height: 150px;
 		z-index: 30;
 		overflow: hidden;
+		color: #fff;
 						
 		transform-origin: top;
 		-ms-transform-origin: top;
@@ -72,11 +73,11 @@ html, body {
 		-o-transform-origin: top;
 		-webkit-transform-origin: top;
 					
-		transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
-		-webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+		transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms, color 300ms 0ms;
+		-ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms, color 300ms 0ms;
+		-moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms, color 300ms 0ms;
+		-o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms, color 300ms 0ms;
+		-webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms, color 300ms 0ms;
 }
 #mail-click:checked ~ .contact .envelope .top {
 		transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
@@ -93,6 +94,7 @@ html, body {
 		-moz-transform: rotateX(180deg);
 		-o-transform: rotateX(180deg);
 		-webkit-transform: rotateX(180deg);
+		color: #149cd6;
 }
 @keyframes tes {
     0%   {background-color: red;}
@@ -274,6 +276,15 @@ top: 0;
 	margin-top: 20px;
 }
 
+.inv {
+	position: absolute;
+	z-index: 999999;
+	left: -105px;
+	top: -127px;
+	font-family: Car;
+	font-size: 50px;
+}
+
 </style>
 
 <div id="bg"></div>
@@ -281,7 +292,8 @@ top: 0;
 <div class="contact">
 	<div class="envelope">
 		<div class="top">
-			<div class="outer"><div class="inner"></div></div>
+			<div class="outer"><span class="inv">Приглашение</span>
+				<div class="inner"></div></div>
 		</div>
 		<div class="bottom"></div>
 		<div class="left"></div>
