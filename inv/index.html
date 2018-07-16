@@ -1,4 +1,11 @@
 <style>
+
+@font-face {
+  font-family: Car;
+  src: url(car.ttf) format('ttf'),
+       url(car.woff) format('woff');
+}
+	
 html, body {
 	margin: 0;
 	padding: 0;
@@ -255,6 +262,18 @@ top: 0;
  display: block;
 }
 
+.names {
+	position: absolute;
+	top: 0;
+	z-index: 99999;
+	font-weight: 200;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 50px;
+  font-family: Car;
+	margin-top: 20px;
+}
+
 </style>
 
 <div id="bg"></div>
@@ -270,7 +289,11 @@ top: 0;
 		<div class="cover"></div>
 		<label for="mail-click"></label>
 		<div class="paper">
+			<h2 class="names">Hello!</h2>
 <img src="https://lh3.googleusercontent.com/X1HLGuG7EwmGmrrk5uloxHw8TyvALSDgWHLKzfBUTiqj3f7aNowBdIivrWRIMAF2rc6YHFyZCCldbETpvuj6rFpgmZza2RUN-39zebuvF2oC0Rysr5p0fSDyypyTkV3ZCyW29bdd7Ds7LhRaog2ivhrVPbqIty0Pe_nxsd8qoEFzEmpSNOJFSFyU9x2BwAc4LsxgxcCM1KicLIejR04ktmuG0FErpU_13KRPnjqLmat4IoPruFa2oLPNTgPHQ4JUXUS151XveG6ZTwo2PDqTRd5F25QwIJOtWLeHBJFK_PaV1a9LK0XyNwyXFsBSVrz9actu3AIIHkRhfU5bZGrPpnLHJ0XRy3jSLP184_dJfnfudWdT9PSh0YBwspB7tk2kRCPCHipDIBbuco5IHbWfl7dOHjHSBprE6LYVyo6tqf10b94HB8Mze9ljpAlANYYwZ64JrbKy9-NIDagqN2vmIUD7zqSGZfisOCRHRbPl8bu0vITnzdb2-F2FIBgFOsQkNO5bZ2cVxxJRwxz7N7XF7Flgj2qFGGI1k4RvNRTneygj9AidIjOrbsHnN_pTgA-0=w1920-h1100" class="card">
 		</div>
 	</div>
 </div>
+<script>
+	document.querySelector('.names').textContent = window.decodeURIComponent(location.search.slice(1));
+</script>
