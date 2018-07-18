@@ -309,10 +309,9 @@ top: 0;
 <script>
 	document.querySelector('.names').textContent = window.decodeURIComponent(location.search.slice(1)) + '!';
 	if(document.querySelector('.names').textContent === 'Павел, Кристина, Ульяна и Олеся!'){
-		/*
-		    max-width: 250px;
-    line-height: 32px;
-    text-align: center;
-*/
+		document.querySelector('.names').style.maxWidth = '250px';
+   		document.querySelector('.names').style.lineHeight = '32px';
+    		document.querySelector('.names').style.textAlign = 'center';
+
 	}
 </script>
