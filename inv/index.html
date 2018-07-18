@@ -308,7 +308,7 @@ top: 0;
 </div>
 <script>
 	document.querySelector('.names').textContent = window.decodeURIComponent(location.search.slice(1)) + '!';
-	if(document.querySelector('.names').textContent === 'Павел, Кристина, Ульяна и Олеся!'){
+	if(document.querySelector('.names').textContent === 'Павел, Кристина, Ульяна и Олеся!' || document.querySelector('.names').textContent === 'Михаил, Ольга и Екатерина!'){
 		document.querySelector('.names').style.maxWidth = '250px';
    		document.querySelector('.names').style.lineHeight = '32px';
     		document.querySelector('.names').style.textAlign = 'center';
